@@ -1,0 +1,122 @@
+{
+  "heroTitle": "Descubre el Mundo",
+  "heroSubtitle": "Vive viajes sin límites. Accede a guías exclusivas, mapas offline y soporte concierge VIP.",
+  "choosePlan": "Elige Tu Viaje",
+  "choosePlanDesc": "Planes flexibles diseñados para todo tipo de viajeros. Actualiza, degrada o cancela en cualquier momento.",
+  "featuresTitle": "Beneficios Premium",
+  "features": {
+    "unlimitedOfflineMaps": "Mapas Offline Ilimitados",
+    "unlimitedOfflineMapsDesc": "Descarga ciudades enteras a tu teléfono. Nunca te pierdas, incluso sin señal.",
+    "exclusiveHiddenGems": "Joyas Ocultas Exclusivas",
+    "exclusiveHiddenGemsDesc": "Accede a nuestra base de datos curada de lugares secretos, lejos de las multitudes turísticas.",
+    "conciergeChat": "Chat Conserje 24/7",
+    "conciergeChatDesc": "Soporte en tiempo real de expertos locales para ayudar con reservas y emergencias.",
+    "exclusivePartnerDeals": "Ofertas de Socios Exclusivas",
+    "exclusivePartnerDealsDesc": "Ahorra hasta un 20% en hoteles y experiencias con nuestros socios globales."
+  },
+  "faqTitle": "Preguntas Frecuentes",
+  "faq": {
+    "cancel": {
+      "question": "¿Puedo cancelar mi suscripción en cualquier momento?",
+      "answer": "Sí, puedes cancelar tu suscripción en cualquier momento. Tus beneficios continuarán hasta el final del período de facturación actual."
+    },
+    "trial": {
+      "question": "¿Cómo funciona la actualización del plan?",
+      "answer": "Cuando actualizas a un nivel superior, el cambio ocurre inmediatamente. Prorratearemos cualquier tiempo restante en tu plan actual."
+    },
+    "payment": {
+      "question": "¿Es segura mi información de pago?",
+      "answer": "Absolutamente. Usamos encriptación estándar de la industria (SSL) y procesamos pagos a través de proveedores seguros como Stripe y Alipay. Nunca almacenamos los detalles de tu tarjeta."
+    },
+    "support": {
+      "question": "¿Qué incluye el Soporte VIP?",
+      "answer": "El Soporte VIP te otorga acceso prioritario a nuestro equipo de conserjería de viajes, asegurando tiempos de respuesta más rápidos y asistencia de viaje personalizada."
+    }
+  },
+  "title": "Elige tu plan",
+  "subtitle": "Selecciona el plan de suscripción perfecto para tus necesidades de viaje",
+  "selectPaymentMethod": "Seleccionar Método de Pago",
+  "selectedPlan": "Plan Seleccionado",
+  "recommended": "Recomendado",
+  "international": "Internacional",
+  "processingPayment": "Procesando Pago",
+  "alipay": "Alipay",
+  "alipayDescription": "Paga de forma segura con Alipay",
+  "stripe": "Stripe",
+  "stripeDescription": "Paga con tarjeta de crédito/débito",
+  "error": {
+    "loadFailed": "Error al cargar los datos de suscripción. Por favor, inténtalo de nuevo.",
+    "loginRequired": "Debes iniciar sesión para actualizar tu suscripción",
+    "alreadySubscribed": "Ya estás suscrito a este plan",
+    "planNotFound": "Plan seleccionado no encontrado",
+    "planDisabled": "Este plan no está disponible actualmente",
+    "updateFailed": "Error al actualizar la suscripción. Por favor, inténtalo de nuevo.",
+    "cancelLoginRequired": "Debes iniciar sesión para cancelar tu suscripción",
+    "noSubscription": "No se encontró suscripción activa",
+    "cancelFailed": "Error al cancelar la suscripción. Por favor, inténtalo de nuevo.",
+    "paymentFailed": "El pago falló. Por favor, inténtalo de nuevo.",
+    "popupBlocked": "Ventana emergente bloqueada. Por favor, permite ventanas emergentes para este sitio.",
+    "paymentNotCompleted": "El pago no se completó exitosamente.",
+    "paymentStatusCheckFailed": "Error al verificar el estado del pago.",
+    "networkError": "Error de red. Por favor, verifica tu conexión.",
+    "timeout": "La solicitud expiró. Por favor, inténtalo de nuevo."
+  },
+  "success": {
+    "updateSuccess": "¡Suscripción actualizada exitosamente!",
+    "cancelSuccess": "Suscripción cancelada exitosamente. Tu acceso continuará hasta el final del período de facturación actual.",
+    "paymentCompleted": "¡Pago completado exitosamente!"
+  },
+  "alipayPayment": "Pago con Alipay",
+  "completePaymentInNewWindow": "Completa tu pago en la nueva ventana que se abrió.",
+  "completePaymentInNewTab": "Completa tu pago en la nueva pestaña que se abrió.",
+  "orderNumber": "Número de Pedido",
+  "iveCompletedPayment": "He Completado el Pago",
+  "checkPaymentStatus": "Verificar Estado del Pago",
+  "paymentWindowBlocked": "La ventana de pago fue bloqueada por tu navegador.",
+  "paymentTabOpened": "La pestaña de pago se abrió exitosamente.",
+  "iframeFallbackNotice": "Usando alternativa iframe para el pago.",
+  "tabFallbackNotice": "Usando alternativa de pestaña para el pago.",
+  "loadingPayment": "Cargando pago...",
+  "payment": {
+    "windowBlocked": "Ventana emergente bloqueada. Por favor, permite ventanas emergentes para este sitio e inténtalo de nuevo.",
+    "redirecting": "Redirigiendo al pago...",
+    "processing": "Procesando pago..."
+  },
+  "card": {
+    "bestValue": "Mejor valor",
+    "popular": "Popular",
+    "off": "de descuento",
+    "currentPlan": "Plan actual",
+    "selectPlan": "Seleccionar plan",
+    "processing": "Procesando...",
+    "comparePlans": "Comparar planes"
+  },
+  "periods": {
+    "week": "semana",
+    "month": "mes",
+    "quarter": "trimestre",
+    "year": "año",
+    "days": "días"
+  },
+  "plans": {
+    "week": {
+      "name": "Semana",
+      "period": "Por semana"
+    },
+    "month": {
+      "name": "Mes",
+      "period": "Por mes"
+    },
+    "season": {
+      "name": "Temporada",
+      "period": "Por mes"
+    },
+    "year": {
+      "name": "Año",
+      "period": "Por mes",
+      "badgeText": "Más popular"
+    }
+  },
+  "travelBackground": "Fondo de Viaje",
+  "appExperience": "Experiencia de la App"
+}

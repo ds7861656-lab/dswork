@@ -1,0 +1,78 @@
+{
+  "title": "لوحة تحكم الملف الشخصي",
+  "subtitle": "إدارة إعدادات حسابك وتفضيلات السفر",
+  "editProfile": "المعلومات الشخصية",
+  "username": "اسم المستخدم",
+  "email": "عنوان البريد الإلكتروني",
+  "mobile": "رقم الهاتف المحمول",
+  "dob": "تاريخ الميلاد",
+  "gender": "الجنس",
+  "male": "ذكر",
+  "female": "أنثى",
+  "update": "حفظ التغييرات",
+  "cancel": "إلغاء",
+  "updating": "حفظ...",
+  "usernamePlaceholder": "اسم العرض الخاص بك",
+  "mobilePlaceholder": "+1 (555) 000-0000",
+  "emailNote": "اتصل بالدعم لتغيير عنوان بريدك الإلكتروني.",
+  
+  "header": {
+    "memberSince": "عضو منذ {{year}}",
+    "freeAccount": "حساب مجاني",
+    "premiumAccount": "عضو مميز",
+    "uploadPhoto": "تحميل صورة",
+    "changePhoto": "تغيير الصورة",
+    "maxSize": "الحد الأقصى 5 ميغابايت"
+  },
+
+  "avatar": {
+    "uploadTitle": "صورة الملف الشخصي",
+    "uploadDesc": "انقر للتحميل أو اسحب وأفلت",
+    "helperText": "SVG، PNG، JPG أو GIF (الحد الأقصى 5 ميغابايت)",
+    "remove": "إزالة الصورة"
+  },
+
+  "security": {
+    "title": "إعدادات الأمان",
+    "description": "إدارة كلمة المرور وأمان حسابك",
+    "currentPassword": "كلمة المرور الحالية",
+    "newPassword": "كلمة مرور جديدة",
+    "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
+    "passwordRequirements": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+    "twoFactor": "المصادقة الثنائية",
+    "twoFactorDesc": "أضف طبقة إضافية من الأمان إلى حسابك",
+    "changePassword": "تغيير كلمة المرور",
+    "secureAccount": "حسابك آمن"
+  },
+
+  "stats": {
+    "tripsPlanned": "الرحلات المخططة",
+    "reviewsLeft": "المراجعات المتروكة",
+    "savedItems": "العناصر المحفوظة"
+  },
+
+  "validation": {
+    "usernameRequired": "اسم المستخدم مطلوب",
+    "emailRequired": "عنوان البريد الإلكتروني مطلوب",
+    "emailInvalid": "يرجى إدخال عنوان بريد إلكتروني صحيح",
+    "mobileRequired": "رقم الهاتف المحمول مطلوب",
+    "dobRequired": "تاريخ الميلاد مطلوب",
+    "genderRequired": "يرجى اختيار جنسك",
+    "passwordTooShort": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+    "passwordMismatch": "كلمتا المرور غير متطابقتان",
+    "notAuthenticated": "يجب تسجيل الدخول لتحديث ملفك الشخصي"
+  },
+
+  "contentComingSoon": "سيتم تنفيذ محتوى {{tab}} هنا قريباً.",
+  "currentPlan": "الخطة الحالية",
+  "loadingPlan": "جاري تحميل تفاصيل الخطة...",
+  "planStatus": "الحالة",
+  "expiresOn": "يتجدد في",
+  "changePlan": "تغيير الخطة",
+  "freePlan": "الخطة المجانية",
+  "noActiveSubscription": "لا توجد اشتراك نشط",
+  "upgradePlan": "الترقية إلى Premium",
+  "manageSubscription": "إدارة الاشتراك",
+  "billingCycle": "دورة الفوترة",
+  "daysRemaining": "أيام متبقية"
+}

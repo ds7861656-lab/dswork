@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afreshtrip - Header</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Css/login.css"/>
+  <link rel="stylesheet" href="../js/login.js" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="../assets/tubiao.png" alt="Afreshtrip Logo" class="logo" />
+      <span class="brand-name">Afreshtrip</span>
+    
+
+      <div class="location-group">
+        <span class="label">Your Location</span>
+        <div class="location-info">
+            <img src="../assets/weizhi.png" alt="Location Icon" class="location-icon" />
+          <span class="city">Paris</span>
+        </div>
+      </div>
+
+  </div>
+  <div class="header-right">
+    <div class="language-dropdown">
+      <span class="lang-label">Choose Language</span>
+      
+        <div class="custom-select" id="language-select">
+          <i class="selected-option">
+            <img src="../assets/3.png" alt="English Icon" class="flag-icon">
+          </i>
+
+          <span class="selected-option">English</span>
+          <img src="../assets/4.png" alt="Dropdown Arrow" class="arrow-icon" />
+
+        
+      </div>
+    
+  </div>
+    <a href="#" class="nav-link">Sign In</a>
+    <a href="#" class="nav-link">Sign Up</a>
+    <a href="#" class="nav-link">Support</a>
+  </div>
+  </header>
+
+
+
+
+<!-- Main Content -->
+<main class="main-content">
+  <div class="login-container">
+    
+  </div>
+</main>
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-left">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Contact Us</a>
+    <a href="#">ALL RIGHTS RESERVED</a>
+    
+  </div>
+  
+
+  <div class="footer-right">
+    <a href="#"><img src="../assets/7.png" alt="FB" class="social-icon fb" /></a>
+    <a href="#"><img src="../assets/6.png" alt="IG" class="social-icon ig" /></a>
+    <a href="#"><img src="../assets/5.png" alt="TW" class="social-icon tw" /></a>
+    <a href="#"><img src="../assets/8.png" alt="YT" class="social-icon yt" /></a>
+  </div>
+
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get("token");
+
+  if (token) {
+    localStorage.setItem("token", token);
+    console.log("✅ 登录成功，token =", token);
+  } else {
+    console.warn("⚠️ 没有获取到 token");
+  }
+</script>
+
+
+
+
+</body>
+</html>

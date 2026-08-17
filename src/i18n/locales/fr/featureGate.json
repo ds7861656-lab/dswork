@@ -1,0 +1,22 @@
+{
+  "verifyingAccess": "Vérification de l'accès...",
+  "travelJournal": "Journal de Voyage",
+  "signInDescription": "Connectez-vous pour voir votre itinéraire, vérifier la météo locale et suivre vos statistiques de voyage.",
+  "signInToContinue": "Se Connecter pour Continuer",
+  "noAccount": "Vous n'avez pas de compte ?",
+  "joinForFree": "Rejoignez gratuitement",
+  "authenticationRequired": "Authentification Requise",
+  "pleaseSignIn": "Veuillez vous connecter pour accéder à cette fonctionnalité.",
+  "signIn": "Se Connecter",
+  "unlockFeature": "Débloquer {{featureName}}",
+  "upgradeDescription": "Mettez à niveau votre plan pour débloquer des voyages illimités, des recommandations IA, et plus encore.",
+  "upgradeNow": "Mettre à Niveau Maintenant",
+  "pro": "PRO",
+  "lockedFeature": "Fonctionnalité Verrouillée",
+  "upgradeToAccess": "Mettez à niveau pour accéder à {{featureName}}",
+  "viewOptions": "Voir les Options",
+  "unknownFeature": "Fonctionnalité Inconnue",
+  "featureNotFound": "Fonctionnalité non trouvée",
+  "unableToCheckAccess": "Impossible de vérifier l'accès à la fonctionnalité",
+  "premiumFeature": "Fonctionnalité Premium"
+}

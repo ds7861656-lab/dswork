@@ -1,0 +1,78 @@
+{
+  "title": "个人资料仪表板",
+  "subtitle": "管理您的账户设置和旅行偏好",
+  "editProfile": "个人信息",
+  "username": "用户名",
+  "email": "电子邮件地址",
+  "mobile": "手机号码",
+  "dob": "出生日期",
+  "gender": "性别",
+  "male": "男",
+  "female": "女",
+  "update": "保存更改",
+  "cancel": "取消",
+  "updating": "保存中...",
+  "usernamePlaceholder": "您的显示名称",
+  "mobilePlaceholder": "+1 (555) 000-0000",
+  "emailNote": "联系支持以更改您的电子邮件地址。",
+  
+  "header": {
+    "memberSince": "自 {{year}} 年起成为会员",
+    "freeAccount": "免费账户",
+    "premiumAccount": "高级会员",
+    "uploadPhoto": "上传照片",
+    "changePhoto": "更改照片",
+    "maxSize": "最大 5MB"
+  },
+
+  "avatar": {
+    "uploadTitle": "个人资料图片",
+    "uploadDesc": "点击上传或拖拽放置",
+    "helperText": "SVG、PNG、JPG 或 GIF（最大 5MB）",
+    "remove": "删除照片"
+  },
+
+  "security": {
+    "title": "安全设置",
+    "description": "管理您的密码和账户安全",
+    "currentPassword": "当前密码",
+    "newPassword": "新密码",
+    "confirmNewPassword": "确认新密码",
+    "passwordRequirements": "密码必须至少 8 个字符",
+    "twoFactor": "双因素认证",
+    "twoFactorDesc": "为您的账户添加额外安全层",
+    "changePassword": "更改密码",
+    "secureAccount": "您的账户是安全的"
+  },
+
+  "stats": {
+    "tripsPlanned": "计划的旅行",
+    "reviewsLeft": "留下的评论",
+    "savedItems": "保存的项目"
+  },
+
+  "validation": {
+    "usernameRequired": "用户名不能为空",
+    "emailRequired": "电子邮件地址不能为空",
+    "emailInvalid": "请输入有效的电子邮件地址",
+    "mobileRequired": "手机号码不能为空",
+    "dobRequired": "出生日期不能为空",
+    "genderRequired": "请选择您的性别",
+    "passwordTooShort": "密码必须至少 8 个字符",
+    "passwordMismatch": "两次输入的密码不一致",
+    "notAuthenticated": "您必须登录才能更新个人资料"
+  },
+
+  "contentComingSoon": "{{tab}} 的内容将在此处实现。",
+  "currentPlan": "当前套餐",
+  "loadingPlan": "正在加载套餐详情...",
+  "planStatus": "状态",
+  "expiresOn": "续订日期",
+  "changePlan": "更改套餐",
+  "freePlan": "免费套餐",
+  "noActiveSubscription": "无活跃订阅",
+  "upgradePlan": "升级到 Premium",
+  "manageSubscription": "管理订阅",
+  "billingCycle": "账单周期",
+  "daysRemaining": "剩余天数"
+}

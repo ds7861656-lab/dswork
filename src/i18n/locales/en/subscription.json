@@ -1,0 +1,140 @@
+{
+  "heroTitle": "Unlock the World",
+  "heroSubtitle": "Experience travel without limits. Access exclusive guides, offline maps, and VIP concierge support.",
+  "choosePlan": "Choose Your Journey",
+  "choosePlanDesc": "Flexible plans designed for every type of traveler. Upgrade, downgrade, or cancel anytime.",
+  "featuresTitle": "Premium Benefits",
+  "features": {
+    "unlimitedOfflineMaps": "Unlimited Offline Maps",
+    "unlimitedOfflineMapsDesc": "Download entire cities to your phone. Never get lost, even without a signal.",
+    "exclusiveHiddenGems": "Exclusive Hidden Gems",
+    "exclusiveHiddenGemsDesc": "Access our curated database of secret spots, away from the tourist crowds.",
+    "conciergeChat": "24/7 Concierge Chat",
+    "conciergeChatDesc": "Real-time support from local experts to help with reservations and emergencies.",
+    "exclusivePartnerDeals": "Exclusive Partner Deals",
+    "exclusivePartnerDealsDesc": "Save up to 20% on hotels and experiences with our global partners."
+  },
+  "faqTitle": "Frequently Asked Questions",
+  "faq": {
+    "cancel": {
+      "question": "Can I cancel my subscription anytime?",
+      "answer": "Yes, you can cancel your subscription at any time. Your benefits will continue until the end of your current billing period."
+    },
+    "trial": {
+      "question": "How does the plan upgrade work?",
+      "answer": "When you upgrade to a higher tier, the change happens immediately. We will pro-rate any remaining time on your current plan."
+    },
+    "payment": {
+      "question": "Is my payment information secure?",
+      "answer": "Absolutely. We use industry-standard encryption (SSL) and process payments through secure providers like Stripe and Alipay. We never store your card details."
+    },
+    "support": {
+      "question": "What does VIP Support include?",
+      "answer": "VIP Support grants you priority access to our travel concierge team, ensuring faster response times and personalized trip assistance."
+    }
+  },
+  "title": "Choose Your Plan",
+  "subtitle": "Select the perfect subscription plan for your travel needs",
+  "selectPaymentMethod": "Select Payment Method",
+  "selectedPlan": "Selected Plan",
+  "recommended": "Recommended",
+  "international": "International",
+  "processingPayment": "Processing Payment",
+  "alipay": "Alipay",
+  "alipayDescription": "Pay securely with Alipay",
+  "stripe": "Stripe",
+  "stripeDescription": "Pay with credit/debit card",
+  "error": {
+    "loadFailed": "Failed to load subscription data. Please try again.",
+    "loginRequired": "You must be logged in to update your subscription",
+    "alreadySubscribed": "You are already subscribed to this plan",
+    "planNotFound": "Selected plan not found",
+    "planDisabled": "This plan is currently not available",
+    "updateFailed": "Failed to update subscription. Please try again.",
+    "cancelLoginRequired": "You must be logged in to cancel your subscription",
+    "noSubscription": "No active subscription found",
+    "cancelFailed": "Failed to cancel subscription. Please try again.",
+    "paymentFailed": "Payment failed. Please try again.",
+    "popupBlocked": "Popup blocked. Please allow popups for this site.",
+    "paymentNotCompleted": "Payment was not completed successfully.",
+    "paymentStatusCheckFailed": "Failed to check payment status.",
+    "networkError": "Network error. Please check your connection.",
+    "timeout": "Request timed out. Please try again."
+  },
+  "success": {
+    "updateSuccess": "Subscription updated successfully!",
+    "cancelSuccess": "Subscription cancelled successfully. Your access will continue until the end of the current billing period.",
+    "paymentCompleted": "Payment completed successfully!"
+  },
+  "alipayPayment": "Alipay Payment",
+  "completePaymentInNewWindow": "Complete your payment in the new window that opened.",
+  "completePaymentInNewTab": "Complete your payment in the new tab that opened.",
+  "orderNumber": "Order Number",
+  "iveCompletedPayment": "I've Completed Payment",
+  "checkPaymentStatus": "Check Payment Status",
+  "paymentWindowBlocked": "Payment window was blocked by your browser.",
+  "paymentTabOpened": "Payment tab opened successfully.",
+  "iframeFallbackNotice": "Using iframe fallback for payment.",
+  "tabFallbackNotice": "Using tab fallback for payment.",
+  "loadingPayment": "Loading payment...",
+  "payment": {
+    "windowBlocked": "Popup blocked. Please allow popups for this site and try again.",
+    "redirecting": "Redirecting to payment...",
+    "processing": "Processing payment..."
+  },
+  "card": {
+    "bestValue": "Best Value",
+    "popular": "Popular",
+    "off": "off",
+    "currentPlan": "Current Plan",
+    "selectPlan": "Select Plan",
+    "processing": "Processing...",
+    "comparePlans": "Compare Plans"
+  },
+  "periods": {
+    "week": "week",
+    "month": "month",
+    "quarter": "quarter",
+    "year": "year",
+    "days": "days"
+  },
+  "plans": {
+    "week": {
+      "name": "Week",
+      "period": "Per week"
+    },
+    "month": {
+      "name": "Month",
+      "period": "Per month"
+    },
+    "season": {
+      "name": "Season",
+      "period": "Per month"
+    },
+    "year": {
+      "name": "Year",
+      "period": "Per month",
+      "badgeText": "Most Popular"
+    }
+  },
+  "faq": {
+    "cancel": {
+      "question": "Can I cancel my subscription anytime?",
+      "answer": "Yes, you can cancel your subscription at any time. Your benefits will continue until the end of your current billing period."
+    },
+    "trial": {
+      "question": "How does the plan upgrade work?",
+      "answer": "When you upgrade to a higher tier, the change happens immediately. We will pro-rate any remaining time on your current plan."
+    },
+    "payment": {
+      "question": "Is my payment information secure?",
+      "answer": "Absolutely. We use industry-standard encryption (SSL) and process payments through secure providers like Stripe and Alipay. We never store your card details."
+    },
+    "support": {
+      "question": "What does VIP Support include?",
+      "answer": "VIP Support grants you priority access to our travel concierge team, ensuring faster response times and personalized trip assistance."
+    }
+  },
+  "travelBackground": "Travel Background",
+  "appExperience": "App Experience"
+}

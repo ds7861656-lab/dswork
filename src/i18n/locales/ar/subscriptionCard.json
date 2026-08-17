@@ -1,0 +1,43 @@
+{
+  "bestValue": "أفضل قيمة",
+  "popular": "شائع",
+  "off": "خصم",
+  "currentPlan": "الخطة الحالية",
+  "selectPlan": "اختر الخطة",
+  "processing": "معالجة...",
+  "comparePlans": "مقارنة الخطط",
+  "plans": {
+    "week": {
+      "name": "أسبوع",
+      "period": "لكل أسبوع"
+    },
+    "month": {
+      "name": "شهر",
+      "period": "لكل شهر"
+    },
+    "season": {
+      "name": "موسم",
+      "period": "لكل شهر"
+    },
+    "year": {
+      "name": "سنة",
+      "period": "لكل شهر",
+      "badgeText": "الأكثر شعبية"
+    }
+  },
+  "features": {
+    "basicTripPlanning": "تخطيط رحلة أساسي",
+    "limitedDestinations": "وجهات محدودة",
+    "emailSupport": "دعم البريد الإلكتروني",
+    "mobileAppAccess": "وصول إلى التطبيق المحمول",
+    "advancedTripPlanning": "تخطيط رحلة متقدم",
+    "unlimitedDestinations": "وجهات غير محدودة",
+    "priorityEmailSupport": "دعم بريد إلكتروني ذو أولوية",
+    "premiumTripPlanning": "تخطيط رحلة مميز",
+    "vipDestinations": "وصول إلى وجهات VIP",
+    "phoneSupport": "دعم هاتفي 24/7",
+    "ultimateTripPlanning": "تخطيط رحلة نهائي",
+    "exclusiveDestinations": "وجهات حصرية",
+    "dedicatedConcierge": "كونسيرج مخصص"
+  }
+}

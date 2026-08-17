@@ -1,0 +1,22 @@
+{
+  "verifyingAccess": "Verifying Access...",
+  "travelJournal": "Travel Journal",
+  "signInDescription": "Sign in to view your itinerary, check local weather, and track your travel stats.",
+  "signInToContinue": "Sign In to Continue",
+  "noAccount": "Don't have an account?",
+  "joinForFree": "Join for free",
+  "authenticationRequired": "Authentication Required",
+  "pleaseSignIn": "Please sign in to access this feature.",
+  "signIn": "Sign In",
+  "unlockFeature": "Unlock {{featureName}}",
+  "upgradeDescription": "Upgrade your plan to unlock unlimited trips, AI recommendations, and more.",
+  "upgradeNow": "Upgrade Now",
+  "pro": "PRO",
+  "lockedFeature": "Locked Feature",
+  "upgradeToAccess": "Upgrade to access {{featureName}}",
+  "viewOptions": "View Options",
+  "unknownFeature": "Unknown Feature",
+  "featureNotFound": "Feature not found",
+  "unableToCheckAccess": "Unable to check feature access",
+  "premiumFeature": "Premium Feature"
+}

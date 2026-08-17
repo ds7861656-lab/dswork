@@ -1,0 +1,43 @@
+{
+  "bestValue": "Best Value",
+  "popular": "Popular",
+  "off": "off",
+  "currentPlan": "Current Plan",
+  "selectPlan": "Select Plan",
+  "processing": "Processing...",
+  "comparePlans": "Compare Plans",
+  "plans": {
+    "week": {
+      "name": "Week",
+      "period": "Per week"
+    },
+    "month": {
+      "name": "Month",
+      "period": "Per month"
+    },
+    "season": {
+      "name": "Season",
+      "period": "Per month"
+    },
+    "year": {
+      "name": "Year",
+      "period": "Per month",
+      "badgeText": "Most Popular"
+    }
+  },
+  "features": {
+    "basicTripPlanning": "Basic trip planning",
+    "limitedDestinations": "Limited destinations",
+    "emailSupport": "Email support",
+    "mobileAppAccess": "Mobile app access",
+    "advancedTripPlanning": "Advanced trip planning",
+    "unlimitedDestinations": "Unlimited destinations",
+    "priorityEmailSupport": "Priority email support",
+    "premiumTripPlanning": "Premium trip planning",
+    "vipDestinations": "VIP destinations access",
+    "phoneSupport": "24/7 phone support",
+    "ultimateTripPlanning": "Ultimate trip planning",
+    "exclusiveDestinations": "Exclusive destinations",
+    "dedicatedConcierge": "Dedicated concierge"
+  }
+}

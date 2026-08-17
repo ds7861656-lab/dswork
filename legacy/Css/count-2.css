@@ -1,0 +1,350 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a5d5d; /* 深青绿色背景 */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo 部分 */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.logo-container .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.brand-name {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Location Group: "Your Location" + " Paris" with underline */
+.location-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-left: 2rem;
+}
+
+.label {
+  font-size: 1.25rem;
+  color: #ccc; /* 浅灰色提示文字 */
+  font-weight: 400;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid white; /* 白色下划线 */
+}
+
+.location-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: brightness(0) saturate(100%) invert(1); /* 更可靠的白色滤镜 */
+}
+
+.city {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* 右侧导航区 */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  justify-content: flex-end; /* 确保靠右对齐 */
+}
+
+.icon-buttons {
+  display: flex;
+  gap: 3rem; /* Adjust gap between icon buttons */
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-btn img {
+  width: 40px;  /* Set appropriate size for icons */
+  height: 40px;
+}
+
+
+
+
+
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+  background: linear-gradient(135deg, #e6f7f7, #f0f8ff);
+ 
+}
+
+/* Profile container styles */
+.profile-container {
+  position: relative;  /* 使容器能够包含绝对定位的元素 */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f4f7fa;
+  width: 1371px;
+  height: 835px;
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 1276px;
+  height: 711px;
+  
+}
+
+.profile-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+
+
+/* 通用的按钮样式 */
+.profile-nav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+  height: 30px;
+  padding: 0 15px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* 默认样式，My Profile按钮单独修改 */
+.profile-nav-btn-active {
+  background-color: #a3c4f3; /* 浅蓝色背景 */
+  color: white;              /* 文字颜色为白色 */
+}
+
+/* 悬停效果 */
+.profile-nav-btn:hover {
+  background-color: #007bff;
+  color: white;
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+
+
+.profile-details {
+  display: flex;
+  gap: 50px; /* Space between avatar and profile form */
+  padding: 20px;
+  background-color: #ffffff;
+  max-height: 90%;
+}
+
+.profile-pic {
+  width: 214px;  /* 头像框宽度 */
+  height: 231px;  /* 头像框高度 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;  /* 背景色为浅灰色 */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* 头像框阴影 */
+  margin-left: 70px;  /* 左侧框距左边的间隔 */
+}
+
+.profile-pic-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;  /* 图像圆角 */
+}
+
+.my-trips {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%; /* Adjust to fit container */
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.my-trips h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trips-table th, .trips-table td {
+    border: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.trips-table th {
+    background-color: #f4f4f4;
+}
+
+.trips-table tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.trips-table td {
+    font-size: 0.95rem;
+}
+
+
+
+
+
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #f0f8ff;
+  border-top: 1px solid #ddd;
+  font-size: 1.35rem;
+  color: #333;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-left a,
+.footer-center p,
+.footer-right a {
+  color: #1a5d5d;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-left a:hover,
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-right i {
+  font-size: 1.8rem;
+  margin-left: 0.8rem;
+  cursor: pointer;
+}
+
+
+/* 社交图标容器 */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* 图标之间的间距 */
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+}
+
+/* 所有社交图标统一设置 */
+.social-icon {
+  width: 36px;     /* 推荐尺寸：24x24px 是清晰又不过大的选择 */
+  height: 36px;
+  object-fit: contain;
+  transition: all 0.2s ease;
+  opacity: 0.8;    /* 稍微柔和一点，不刺眼 */
+  margin-right: 0.75rem; /* 根据实际情况调整间距 */
+}
+
+/* 鼠标悬停效果 */
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.1);
+  filter: brightness(0) saturate(100%) invert(17%) sepia(30%) saturate(400%) hue-rotate(170deg) brightness(90%) contrast(95%);
+}
+
+/* 额外：点击时轻微下沉 */
+.social-icon:active {
+  transform: translateY(0) scale(0.95);
+}
+
+

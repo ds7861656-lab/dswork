@@ -1,0 +1,53 @@
+{
+  "pricing": {
+    "title": "Choose Your Plan",
+    "subtitle": "Unlock unlimited trips, AI recommendations, and more",
+    
+    "week": "Week",
+    "month": "Month",
+    "season": "Season",
+    "year": "Year",
+    
+    "perWeek": "Per week",
+    "perMonth": "Per month",
+    
+    "popular": "Most Popular",
+    "save30": "Save 30%",
+    "save40": "Save 40%",
+    "save50": "Save 50%",
+    
+    "select": "Select Plan",
+    "selected": "Selected",
+    "update": "Update",
+    
+    "features": {
+      "unlimitedTrips": "Unlimited trip planning",
+      "aiRecommendations": "AI-powered recommendations",
+      "offlineAccess": "Offline access",
+      "prioritySupport": "Priority support",
+      
+      "allWeekFeatures": "All Week features",
+      "advancedAnalytics": "Advanced analytics",
+      "teamCollaboration": "Team collaboration",
+      "customBranding": "Custom branding",
+      
+      "allMonthFeatures": "All Month features",
+      "dedicatedManager": "Dedicated account manager",
+      "apiAccess": "API access",
+      "whiteLabel": "White-label options",
+      
+      "allSeasonFeatures": "All Season features",
+      "lifetimeUpdates": "Lifetime updates",
+      "vipSupport": "VIP support",
+      "earlyAccess": "Early access to new features"
+    },
+    
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Question": "Can I change my plan later?",
+    "faq1Answer": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.",
+    "faq2Question": "Is there a free trial?",
+    "faq2Answer": "We offer a 7-day free trial for all plans. No credit card required.",
+    "faq3Question": "What payment methods do you accept?",
+    "faq3Answer": "We accept all major credit cards, PayPal, and bank transfers."
+  }
+}

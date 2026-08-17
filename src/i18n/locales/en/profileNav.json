@@ -1,0 +1,13 @@
+{
+  "profile": "Profile",
+  "subscription": "Subscription",
+  "trips": "Trips",
+  "notifications": "Notifications",
+  "logout": "Logout",
+  "title": "Profile Navigation",
+  "closeMenu": "Close Menu",
+  "openMenu": "Open Menu",
+  "logoutConfirmation": "Confirm Logout",
+  "logoutMessage": "Are you sure you want to log out?",
+  "cancel": "Cancel"
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afreshtrip - Header</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Css/count-1.css" />
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="../assets/tubiao.png" alt="Afreshtrip Logo" class="logo" />
+      <span class="brand-name">Afreshtrip</span>
+
+
+      <div class="location-group">
+        <span class="label">Your Location</span>
+        <div class="location-info">
+          <img src="../assets/weizhi.png" alt="Location Icon" class="location-icon" />
+          <span class="city">Paris</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="header-right">
+
+      <!-- Add icon buttons to the left of the language dropdown -->
+      <div class="icon-buttons">
+        <button class="icon-btn"><img src="../assets/login-1.png" alt="Home" /></button>
+        <button class="icon-btn"><img src="../assets/login-2.png" alt="Blog" /></button>
+        <button class="icon-btn"><img src="../assets/login-3.png" alt="User" /></button>
+        <button class="icon-btn"><img src="../assets/login-4.png" alt="Support" /></button>
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="profile-container">
+      <div class="profile-card">
+
+        <!-- Top Navigation -->
+        <div class="profile-nav">
+          <button class="profile-nav-btn profile-nav-btn-active">My Profile</button>
+          <button class="profile-nav-btn">Subscription</button>
+          <button class="profile-nav-btn">My trips</button>
+          <button class="profile-nav-btn">Notification</button>
+          <button class="profile-nav-btn">Logout</button>
+        </div>
+
+        <!-- Avatar and Profile Information -->
+        <div class="profile-details">
+
+
+          <!-- Subscription Options -->
+          <div class="subscription-card" :class="{'selected': selected === 'week'}" @click="selectOption('week')">
+            <div class="card-header">Week</div>
+            <div class="price">$19</div>
+            <div class="description">Per week</div>
+            <button class="update-btn">You are here!</button>
+          </div>
+          <div class="subscription-card" :class="{'selected': selected === 'month'}" @click="selectOption('month')">
+            <div class="card-header">Month</div>
+            <div class="price">$39</div>
+            <div class="description">Per month</div>
+            <button class="update-btn">Update</button>
+          </div>
+          <div class="subscription-card" :class="{'selected': selected === 'season'}" @click="selectOption('season')">
+            <div class="card-header">Season</div>
+            <div class="price">$89</div>
+            <div class="description">Per month</div>
+            <button class="update-btn">Update</button>
+          </div>
+          <div class="subscription-card" :class="{'selected': selected === 'year'}" @click="selectOption('year')">
+            <div class="card-header">Year</div>
+            <div class="price">$199</div>
+            <div class="description">Per month</div>
+            <button class="update-btn">Update</button>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact Us</a>
+      <a href="#">ALL RIGHTS RESERVED</a>
+
+    </div>
+
+
+    <div class="footer-right">
+      <a href="#"><img src="../assets/7.png" alt="FB" class="social-icon fb" /></a>
+      <a href="#"><img src="../assets/6.png" alt="IG" class="social-icon ig" /></a>
+      <a href="#"><img src="../assets/5.png" alt="TW" class="social-icon tw" /></a>
+      <a href="#"><img src="../assets/8.png" alt="YT" class="social-icon yt" /></a>
+    </div>
+
+  </footer>
+
+</body>
+
+
+
+</html>

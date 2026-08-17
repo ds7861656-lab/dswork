@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afreshtrip - Blog</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Css/blog-5.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="../assets/tubiao.png" alt="Afreshtrip Logo" class="logo" />
+      <span class="brand-name">Afreshtrip</span>
+
+      <div class="location-group">
+        <span class="label">Your Location</span>
+        <div class="location-info">
+          <img src="../assets/weizhi.png" alt="Location Icon" class="location-icon" />
+          <span class="city">Paris</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-right">
+        <div class="language-dropdown">
+          <span class="lang-label">Choose Language</span>
+          <div class="custom-select">
+            <img src="../assets/3.png" alt="Language" class="flag-icon">
+            <span>English</span>
+            <img src="../assets/4.png" alt="Arrow" class="arrow-icon">
+          </div>
+        </div>
+      
+        <!-- 新增的按钮 -->
+        <div class="toolbar-btn-group">
+          <button class="toolbar-btn">
+            <img src="../assets/add.png" alt="Add" class="toolbar-icon">
+          </button>
+          <button class="toolbar-btn">
+            <img src="../assets/heart.png" alt="Like" class="toolbar-icon">
+          </button>
+          <button class="toolbar-btn">
+            <img src="../assets/bookmark.png" alt="Save" class="toolbar-icon">
+          </button>
+        </div>
+    
+        <!-- 用户图标 -->
+  <button class="user-icon-btn">
+    <img src="../assets/avater.png" alt="User" class="user-icon">
+</button>
+    </div>
+</div>
+      
+  
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+
+<!-- Success Message Section -->
+<div class="publish-success">
+    <img src="../assets/good.png" alt="Success Icon" class="success-icon" />
+    <p class="success-text">Published Successfully!</p>
+    <div class="success-line"></div>
+    <button class="read-btn">Read</button>
+    <button class="back-btn">Back</button>
+
+  </div>
+  </main>
+
+
+ 
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact Us</a>
+      <a href="#">ALL RIGHTS RESERVED</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="#"><img src="../assets/7.png" alt="FB" class="social-icon fb" /></a>
+      <a href="#"><img src="../assets/6.png" alt="IG" class="social-icon ig" /></a>
+      <a href="#"><img src="../assets/5.png" alt="TW" class="social-icon tw" /></a>
+      <a href="#"><img src="../assets/8.png" alt="YT" class="social-icon yt" /></a>
+    </div>
+  </footer>
+
+  
+    <!-- ✅ 登出确认弹窗 -->
+    <div id="logout-modal" class="logout-modal hidden">
+        <div class="logout-dialog">
+          <img src="../assets/exit.png" alt="Logout Icon" class="logout-dialog-icon" />
+          <h3>Are you sure you want to log out?</h3>
+          <div class="logout-actions">
+            <button id="confirm-logout" class="btn confirm-btn">Confirm</button>
+            <button id="cancel-logout" class="btn cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    
+    
+  
+</body>
+</html>

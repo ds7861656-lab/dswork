@@ -1,0 +1,251 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a5d5d; /* 深青绿色背景 */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo 部分 */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.logo-container .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.brand-name {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Location Group: "Your Location" + " Paris" with underline */
+.location-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-left: 2rem;
+}
+
+.label {
+  font-size: 1.25rem;
+  color: #ccc; /* 浅灰色提示文字 */
+  font-weight: 400;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid white; /* 白色下划线 */
+}
+
+.location-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: brightness(0) saturate(100%) invert(1); /* 更可靠的白色滤镜 */
+}
+
+.city {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* 右侧导航区 */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  justify-content: flex-end; /* 确保靠右对齐 */
+}
+
+/* Language Dropdown */
+.language-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 靠右对齐 */
+  gap: 0.3rem;
+}
+
+.lang-label {
+  font-size: 1.5rem;
+  color: #ccc; /* 浅灰色提示文字 */
+  font-weight: 400;
+  text-align: right;
+}
+
+/* Custom Select (可点击区域) */
+.custom-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  border-bottom: 2px solid white; /* 白色下划线 */
+}
+
+.custom-select:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Flag Icon */
+.flag-icon {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  filter: invert(1) brightness(100%);
+  vertical-align: middle;
+}
+
+.arrow-icon {
+  width: 18px;                   /* 调整箭头大小 */
+  height: auto;
+  object-fit: contain;
+  filter: invert(1) brightness(100%); /* 如果原图是黑色/灰色，转为白色 */
+  transition: transform 0.2s ease;   /* 支持旋转动画（可选） */
+}
+
+/* Navigation Links */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.35rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #e0f7ff;
+}
+
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+  background: linear-gradient(135deg, #e6f7f7, #f0f8ff);
+  
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+}
+
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #f0f8ff;
+  border-top: 1px solid #ddd;
+  font-size: 1.35rem;
+  color: #333;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-left a,
+.footer-center p,
+.footer-right a {
+  color: #1a5d5d;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-left a:hover,
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-right i {
+  font-size: 1.8rem;
+  margin-left: 0.8rem;
+  cursor: pointer;
+}
+
+
+/* 社交图标容器 */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* 图标之间的间距 */
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+}
+
+/* 所有社交图标统一设置 */
+.social-icon {
+  width: 36px;     /* 推荐尺寸：24x24px 是清晰又不过大的选择 */
+  height: 36px;
+  object-fit: contain;
+  transition: all 0.2s ease;
+  opacity: 0.8;    /* 稍微柔和一点，不刺眼 */
+  margin-right: 0.75rem; /* 根据实际情况调整间距 */
+}
+
+/* 鼠标悬停效果 */
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.1);
+  filter: brightness(0) saturate(100%) invert(17%) sepia(30%) saturate(400%) hue-rotate(170deg) brightness(90%) contrast(95%);
+}
+
+/* 额外：点击时轻微下沉 */
+.social-icon:active {
+  transform: translateY(0) scale(0.95);
+}
+
+

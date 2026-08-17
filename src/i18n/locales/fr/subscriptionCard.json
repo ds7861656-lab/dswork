@@ -1,0 +1,43 @@
+{
+  "bestValue": "Meilleur rapport qualité-prix",
+  "popular": "Populaire",
+  "off": "de réduction",
+  "currentPlan": "Plan actuel",
+  "selectPlan": "Sélectionner le plan",
+  "processing": "Traitement...",
+  "comparePlans": "Comparer les plans",
+  "plans": {
+    "week": {
+      "name": "Semaine",
+      "period": "Par semaine"
+    },
+    "month": {
+      "name": "Mois",
+      "period": "Par mois"
+    },
+    "season": {
+      "name": "Saison",
+      "period": "Par mois"
+    },
+    "year": {
+      "name": "Année",
+      "period": "Par mois",
+      "badgeText": "Le plus populaire"
+    }
+  },
+  "features": {
+    "basicTripPlanning": "Planification de voyage de base",
+    "limitedDestinations": "Destinations limitées",
+    "emailSupport": "Support par email",
+    "mobileAppAccess": "Accès à l'application mobile",
+    "advancedTripPlanning": "Planification de voyage avancée",
+    "unlimitedDestinations": "Destinations illimitées",
+    "priorityEmailSupport": "Support par email prioritaire",
+    "premiumTripPlanning": "Planification de voyage premium",
+    "vipDestinations": "Accès aux destinations VIP",
+    "phoneSupport": "Support téléphonique 24/7",
+    "ultimateTripPlanning": "Planification de voyage ultime",
+    "exclusiveDestinations": "Destinations exclusives",
+    "dedicatedConcierge": "Concierge dédié"
+  }
+}

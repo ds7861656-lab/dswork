@@ -1,0 +1,122 @@
+{
+  "heroTitle": "发现世界",
+  "heroSubtitle": "体验无限旅程。访问独家指南、离线地图和VIP礼宾支持。",
+  "choosePlan": "选择您的旅程",
+  "choosePlanDesc": "为所有类型的旅行者设计的灵活计划。随时升级、降级或取消。",
+  "featuresTitle": "高级福利",
+  "features": {
+    "unlimitedOfflineMaps": "无限离线地图",
+    "unlimitedOfflineMapsDesc": "将整个城市下载到您的手机。即使没有信号，也永远不会迷路。",
+    "exclusiveHiddenGems": "独家隐藏宝石",
+    "exclusiveHiddenGemsDesc": "访问我们精心挑选的秘密地点数据库，远离游客人群。",
+    "conciergeChat": "24/7礼宾聊天",
+    "conciergeChatDesc": "来自本地专家的实时支持，帮助预订和紧急情况。",
+    "exclusivePartnerDeals": "独家合作伙伴优惠",
+    "exclusivePartnerDealsDesc": "通过我们的全球合作伙伴节省高达20%的酒店和体验费用。"
+  },
+  "faqTitle": "常见问题",
+  "faq": {
+    "cancel": {
+      "question": "我可以随时取消订阅吗？",
+      "answer": "是的，您可以随时取消订阅。您的权益将持续到当前计费周期结束。"
+    },
+    "trial": {
+      "question": "计划升级如何运作？",
+      "answer": "当您升级到更高等级时，更改会立即发生。我们将按比例调整您当前计划的剩余时间。"
+    },
+    "payment": {
+      "question": "我的付款信息安全吗？",
+      "answer": "绝对安全。我们使用行业标准加密（SSL），并通过Stripe和Alipay等安全提供商处理付款。我们从不存储您的卡详情。"
+    },
+    "support": {
+      "question": "VIP支持包括什么？",
+      "answer": "VIP支持授予您优先访问我们的旅行礼宾团队，确保更快的响应时间和个性化的旅行协助。"
+    }
+  },
+  "travelBackground": "旅行背景",
+  "appExperience": "应用体验",
+  "title": "选择您的计划",
+  "subtitle": "为您的旅行需求选择完美的订阅计划",
+  "selectPaymentMethod": "选择支付方式",
+  "selectedPlan": "已选计划",
+  "recommended": "推荐",
+  "international": "国际",
+  "processingPayment": "处理支付",
+  "alipay": "支付宝",
+  "alipayDescription": "使用支付宝安全支付",
+  "stripe": "Stripe",
+  "stripeDescription": "使用信用卡/借记卡支付",
+  "error": {
+    "loadFailed": "加载订阅数据失败。请重试。",
+    "loginRequired": "您必须登录才能更新订阅",
+    "alreadySubscribed": "您已经订阅了此计划",
+    "planNotFound": "未找到选定的计划",
+    "planDisabled": "此计划目前不可用",
+    "updateFailed": "更新订阅失败。请重试。",
+    "cancelLoginRequired": "您必须登录才能取消订阅",
+    "noSubscription": "未找到活跃订阅",
+    "cancelFailed": "取消订阅失败。请重试。",
+    "paymentFailed": "支付失败。请重试。",
+    "popupBlocked": "弹窗被阻止。请允许此网站的弹窗。",
+    "paymentNotCompleted": "支付未成功完成。",
+    "paymentStatusCheckFailed": "检查支付状态失败。",
+    "networkError": "网络错误。请检查您的连接。",
+    "timeout": "请求超时。请重试。"
+  },
+  "success": {
+    "updateSuccess": "订阅更新成功！",
+    "cancelSuccess": "订阅取消成功。您的访问权限将持续到当前计费周期结束。",
+    "paymentCompleted": "支付成功完成！"
+  },
+  "alipayPayment": "支付宝支付",
+  "completePaymentInNewWindow": "在新打开的窗口中完成您的支付。",
+  "completePaymentInNewTab": "在新打开的标签页中完成您的支付。",
+  "orderNumber": "订单号",
+  "iveCompletedPayment": "我已完成支付",
+  "checkPaymentStatus": "检查支付状态",
+  "paymentWindowBlocked": "支付窗口被您的浏览器阻止。",
+  "paymentTabOpened": "支付标签页已成功打开。",
+  "iframeFallbackNotice": "使用iframe备用方案进行支付。",
+  "tabFallbackNotice": "使用标签页备用方案进行支付。",
+  "loadingPayment": "加载支付中...",
+  "payment": {
+    "windowBlocked": "弹窗被阻止。请允许此网站的弹窗并重试。",
+    "redirecting": "正在跳转到支付...",
+    "processing": "处理支付中..."
+  },
+  "card": {
+    "bestValue": "最佳价值",
+    "popular": "热门",
+    "off": "折扣",
+    "currentPlan": "当前计划",
+    "selectPlan": "选择计划",
+    "processing": "处理中...",
+    "comparePlans": "比较计划"
+  },
+  "periods": {
+    "week": "周",
+    "month": "月",
+    "quarter": "季度",
+    "year": "年",
+    "days": "天"
+  },
+  "plans": {
+    "week": {
+      "name": "周",
+      "period": "每周"
+    },
+    "month": {
+      "name": "月",
+      "period": "每月"
+    },
+    "season": {
+      "name": "季",
+      "period": "每月"
+    },
+    "year": {
+      "name": "年",
+      "period": "每月",
+      "badgeText": "最受欢迎"
+    }
+  }
+}

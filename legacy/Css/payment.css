@@ -1,0 +1,354 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a5d5d; /* 深青绿色背景 */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo 部分 */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  
+  
+  .logo-container .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+  }
+  
+  .brand-name {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Location Group: "Your Location" + " Paris" with underline */
+  .location-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    margin-left: 2rem;
+  }
+  
+  .label {
+    font-size: 1.25rem;
+    color: #ccc; /* 浅灰色提示文字 */
+    font-weight: 400;
+  }
+  
+  .location-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid white; /* 白色下划线 */
+  }
+  
+  .location-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    vertical-align: middle;
+    filter: brightness(0) saturate(100%) invert(1); /* 更可靠的白色滤镜 */
+  }
+  
+  .city {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+  }
+  
+  /* 右侧导航区 */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    justify-content: flex-end; /* 确保靠右对齐 */
+  }
+  
+  .icon-buttons {
+    display: flex;
+    gap: 3rem; /* Adjust gap between icon buttons */
+  }
+  
+  .icon-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-btn img {
+    width: 40px;  /* Set appropriate size for icons */
+    height: 40px;
+  }
+  
+  
+  
+  
+  
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 2rem;
+    background: linear-gradient(135deg, #e6f7f7, #f0f8ff);
+   
+  }
+  
+  /* Profile container styles */
+  .profile-container {
+    position: relative;  /* 使容器能够包含绝对定位的元素 */
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f4f7fa;
+    width: 1371px;
+    height: 835px;
+  }
+  
+  .profile-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 1276px;
+    height: 711px;
+    
+  }
+  
+  .profile-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  
+  
+  /* 通用的按钮样式 */
+  .profile-nav-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    height: 30px;
+    padding: 0 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* 默认样式，My Profile按钮单独修改 */
+  .profile-nav-btn-active {
+    background-color: #a3c4f3; /* 浅蓝色背景 */
+    color: white;              /* 文字颜色为白色 */
+  }
+  
+  /* 悬停效果 */
+  .profile-nav-btn:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: underline;
+    transform: translateY(-2px);
+  }
+  
+  
+  
+  .profile-details {
+    margin-top: 150px;
+    display: flex;
+    padding: 100px;
+    background-color: #ffffff;
+    max-height: 100%;
+    position: relative;  /* 使父元素可以定位伪元素 */
+  
+  
+   /* 取消原有的 border */
+   border-top: none;
+    border-bottom: none;
+  
+      /* Adjust the space between line and content */
+    padding-top: 0px; /* Add space between top line and content */
+    padding-bottom: 0px; /* Add space between bottom line and content */
+  }
+  
+  /* 添加伪元素控制横线长度 */
+  .profile-details::before,
+  .profile-details::after {
+    content: ''; /* 必须设置 content 来显示伪元素 */
+    position: absolute;
+    width: 90%; /* 调整横线的长度 */
+  
+  
+    height: 6px; /* 设置线条高度 */
+    background-color: #145a53; /* 深青色 */
+    left: 50%; /* 将横线的左边界移动到父容器的 50% 位置 */
+    transform: translateX(-50%); /* 将横线的中心点对齐父容器的中心 */
+  }
+  
+  .profile-details::before {
+    top: 0; /* 顶部横线 */
+  }
+  
+  .profile-details::after {
+    bottom: 0; /* 底部横线 */
+  }
+  
+  /* Individual Subscription Card */
+  .subscription-card {
+    background-color: #f0f8ff;
+    
+    padding: 1rem;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px);
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .subscription-card.selected {
+    background-color: #93d4d9;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .price {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .update-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #1a5d5d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #f0f8ff;
+    border-top: 1px solid #ddd;
+    font-size: 1.35rem;
+    color: #333;
+  }
+  
+  .footer-left,
+  .footer-right {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left a,
+  .footer-center p,
+  .footer-right a {
+    color: #1a5d5d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-left a:hover,
+  .footer-right a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-right i {
+    font-size: 1.8rem;
+    margin-left: 0.8rem;
+    cursor: pointer;
+  }
+  
+  
+  
+  /* 社交图标容器 */
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 3rem; /* 图标之间的间距 */
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+  }
+  
+  /* 所有社交图标统一设置 */
+  .social-icon {
+    width: 36px;     /* 推荐尺寸：24x24px 是清晰又不过大的选择 */
+    height: 36px;
+    object-fit: contain;
+    transition: all 0.2s ease;
+    opacity: 0.8;    /* 稍微柔和一点，不刺眼 */
+    margin-right: 0.75rem; /* 根据实际情况调整间距 */
+  }
+  
+  /* 鼠标悬停效果 */
+  .social-icon:hover {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.1);
+    filter: brightness(0) saturate(100%) invert(17%) sepia(30%) saturate(400%) hue-rotate(170deg) brightness(90%) contrast(95%);
+  }
+  
+  /* 额外：点击时轻微下沉 */
+  .social-icon:active {
+    transform: translateY(0) scale(0.95);
+  }
+  
+  
+  

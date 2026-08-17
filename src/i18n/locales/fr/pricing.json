@@ -1,0 +1,15 @@
+{
+  "pricing": {
+    "title": "Choisissez Votre Plan",
+    "subtitle": "Débloquez des voyages illimités, des recommandations IA et plus encore",
+    "week": "Semaine",
+    "month": "Mois",
+    "season": "Saison",
+    "year": "Année",
+    "perWeek": "Par semaine",
+    "perMonth": "Par mois",
+    "popular": "Le Plus Populaire",
+    "select": "Sélectionner le Plan",
+    "selected": "Sélectionné"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "profile": "Profil",
+  "subscription": "Abonnement",
+  "trips": "Voyages",
+  "notifications": "Notifications",
+  "logout": "Se déconnecter",
+  "title": "Navigation du profil",
+  "closeMenu": "Fermer le menu",
+  "openMenu": "Ouvrir le menu",
+  "logoutConfirmation": "Confirmer la déconnexion",
+  "logoutMessage": "Êtes-vous sûr de vouloir vous déconnecter ?",
+  "cancel": "Annuler"
+}

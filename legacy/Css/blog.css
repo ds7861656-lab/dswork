@@ -1,0 +1,702 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a5d5d; /* 深青绿色背景 */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo 部分 */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  
+  
+  .logo-container .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+  }
+  
+  .brand-name {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Location Group: "Your Location" + " Paris" with underline */
+  .location-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    margin-left: 2rem;
+  }
+  
+  .label {
+    font-size: 1.25rem;
+    color: #ccc; /* 浅灰色提示文字 */
+    font-weight: 400;
+  }
+  
+  .location-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid white; /* 白色下划线 */
+  }
+  
+  .location-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    vertical-align: middle;
+    filter: brightness(0) saturate(100%) invert(1); /* 更可靠的白色滤镜 */
+  }
+  
+  .city {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+  }
+  
+  /* 右侧导航区 */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    justify-content: flex-end; /* 确保靠右对齐 */
+  }
+  
+  /* Language Dropdown */
+  .language-dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* 靠右对齐 */
+    gap: 0.3rem;
+  }
+  
+  .lang-label {
+    font-size: 1.5rem;
+    color: #ccc; /* 浅灰色提示文字 */
+    font-weight: 400;
+    text-align: right;
+  }
+  
+  /* Custom Select (可点击区域) */
+  .custom-select {
+    display: inline-flex;
+    align-items: center;
+    gap: 2.5rem;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+    border-bottom: 2px solid white; /* 白色下划线 */
+  }
+  
+  .custom-select:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Flag Icon */
+  .flag-icon {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    filter: invert(1) brightness(100%);
+    vertical-align: middle;
+  }
+  
+  .arrow-icon {
+    width: 18px;                   /* 调整箭头大小 */
+    height: auto;
+    object-fit: contain;
+    filter: invert(1) brightness(100%); /* 如果原图是黑色/灰色，转为白色 */
+    transition: transform 0.2s ease;   /* 支持旋转动画（可选） */
+  }
+  
+  /* Navigation Links */
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.35rem;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    color: #e0f7ff;
+  }
+  
+  /* 用户信息区域 */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 邮箱样式 */
+.user-email {
+  font-weight: 500;
+  color: #333;
+}
+
+
+
+  
+  /* ====== Main Layout ====== */
+.main-content {
+    background-color: #eaf6f6;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .blog-container {
+    display: grid;
+    grid-template-columns: 1.1fr 1.4fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* ====== Left: Country Card ====== */
+  .country-card {
+    background-color: #ffecec;
+    border-radius: 8px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .country-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .country-description {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  
+  .dotted-line {
+    border-top: 2px dotted #000;
+    margin: 20px 0;
+  }
+  
+  /* Tour Cards */
+  .tour-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .tour-card {
+    background-color: #ffdcdc;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .tour-img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .tour-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .tour-card p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .btn-dark {
+    background-color: #000;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn-dark:hover {
+    background-color: #333;
+  }
+  
+  /* ====== Right: Testimonials ====== */
+  .testimonials-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .gallery-item {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    align-items: center;
+  }
+  
+  .gallery-img {
+    width: 160px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .gallery-text {
+    flex: 1;
+  }
+  
+  .gallery-text h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 6px;
+  }
+  
+  .gallery-text p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .meta {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 4px;
+  }
+  
+  .read-link {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .read-link:hover {
+    text-decoration: underline;
+  }
+
+/* ====== Testimonials Section ====== */
+.gallery-card {
+  display: flex;
+  background: #f9fcff;         /* 柔和的浅蓝白底 */
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  align-items: center;
+}
+
+
+.gallery-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.gallery-img {
+  width: 45%;
+  height: 180px;              /* 固定高度，保持统一视觉比例 */
+  object-fit: cover;          /* 保持图片不变形地填充 */
+  border-radius: 16px;        /* 圆角效果 */
+  margin: 12px;               /* 与文字区域拉开距离 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);     /* 悬停时轻微放大 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-content {
+  padding: 15px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.gallery-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.action-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.gallery-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.user-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.gallery-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.gallery-description {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.read-link {
+  color: #007bff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.read-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ===== 浮动按钮栏样式 ===== */
+.floating-toolbar {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #7aa3a3;
+  border-radius: 30px;
+  padding: 12px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row; /* 修改为水平排列 */
+  align-items: center;
+  gap: 12px; /* 设置按钮之间的间隔 */
+  z-index: 1000;
+}
+
+/* 按钮通用样式 */
+.toolbar-btn {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+/* 悬停时的视觉反馈 */
+.toolbar-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 图标样式 */
+.toolbar-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* 点击反馈 */
+.toolbar-btn:active {
+  transform: scale(0.95);
+}
+
+.toolbar-btn-group {
+  display: flex;
+  gap: 12px; /* 按钮之间的间距 */
+}
+  
+/* 用户图标按钮 */
+.user-icon-btn {
+  /* background-color: #1a5d5d; */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* 设置用户图标按钮的尺寸比其他按钮稍大 */
+  width: 56px;
+  height: 56px;
+  padding: 4px;  /* 增加内边距，使按钮的内容看起来居中 */
+
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  
+
+}
+
+.user-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* 悬停效果：背景微亮 */
+user-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+
+
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #f0f8ff;
+    border-top: 1px solid #ddd;
+    font-size: 1.35rem;
+    color: #333;
+  }
+  
+  .footer-left,
+  .footer-right {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left a,
+  .footer-center p,
+  .footer-right a {
+    color: #1a5d5d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-left a:hover,
+  .footer-right a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-right i {
+    font-size: 1.8rem;
+    margin-left: 0.8rem;
+    cursor: pointer;
+  }
+  
+  
+  /* 社交图标容器 */
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 3rem; /* 图标之间的间距 */
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+  }
+  
+  /* 所有社交图标统一设置 */
+  .social-icon {
+    width: 36px;     /* 推荐尺寸：24x24px 是清晰又不过大的选择 */
+    height: 36px;
+    object-fit: contain;
+    transition: all 0.2s ease;
+    opacity: 0.8;    /* 稍微柔和一点，不刺眼 */
+    margin-right: 0.75rem; /* 根据实际情况调整间距 */
+  }
+  
+  /* 鼠标悬停效果 */
+  .social-icon:hover {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.1);
+    filter: brightness(0) saturate(100%) invert(17%) sepia(30%) saturate(400%) hue-rotate(170deg) brightness(90%) contrast(95%);
+  }
+  
+  /* 额外：点击时轻微下沉 */
+  .social-icon:active {
+    transform: translateY(0) scale(0.95);
+  }
+  
+  
+  /* ✅ 登出弹窗背景遮罩 */
+.logout-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* ✅ 弹窗卡片 */
+.logout-dialog {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  max-width: 360px;
+  width: 90%;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.logout-dialog-icon {
+  width: 50px;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.logout-dialog h3 {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.logout-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logout-actions .btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.confirm-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+.confirm-btn:hover {
+  background-color: #e05252;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+.cancel-btn:hover {
+  background-color: #cfcfcf;
+}
+
+/* ✅ 隐藏状态 */
+.hidden {
+  display: none;
+}
+
+/* ✅ 弹入动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

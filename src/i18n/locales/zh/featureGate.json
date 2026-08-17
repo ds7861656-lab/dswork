@@ -1,0 +1,22 @@
+{
+  "verifyingAccess": "验证访问中...",
+  "travelJournal": "旅行日志",
+  "signInDescription": "登录以查看您的行程、检查当地天气并跟踪您的旅行统计。",
+  "signInToContinue": "登录继续",
+  "noAccount": "还没有账户？",
+  "joinForFree": "免费加入",
+  "authenticationRequired": "需要身份验证",
+  "pleaseSignIn": "请登录以访问此功能。",
+  "signIn": "登录",
+  "unlockFeature": "解锁 {{featureName}}",
+  "upgradeDescription": "升级您的计划以解锁无限旅行、AI推荐等更多功能。",
+  "upgradeNow": "立即升级",
+  "pro": "专业版",
+  "lockedFeature": "功能已锁定",
+  "upgradeToAccess": "升级以访问 {{featureName}}",
+  "viewOptions": "查看选项",
+  "unknownFeature": "未知功能",
+  "featureNotFound": "未找到功能",
+  "unableToCheckAccess": "无法检查功能访问权限",
+  "premiumFeature": "高级功能"
+}

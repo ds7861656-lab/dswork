@@ -1,0 +1,13 @@
+{
+  "profile": "个人资料",
+  "subscription": "订阅",
+  "trips": "旅行",
+  "notifications": "通知",
+  "logout": "登出",
+  "title": "个人资料导航",
+  "closeMenu": "关闭菜单",
+  "openMenu": "打开菜单",
+  "logoutConfirmation": "确认登出",
+  "logoutMessage": "您确定要登出吗？",
+  "cancel": "取消"
+}

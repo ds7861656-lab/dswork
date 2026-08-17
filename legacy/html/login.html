@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logom Page</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Css/login.css"/>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="../assets/tubiao.png" alt="Afreshtrip Logo" class="logo" />
+      <span class="brand-name">Afreshtrip</span>
+    
+
+      <div class="location-group">
+        <span class="label">Your Location</span>
+        <div class="location-info">
+            <img src="../assets/weizhi.png" alt="Location Icon" class="location-icon" />
+          <span class="city">Paris</span>
+        </div>
+      </div>
+
+  </div>
+  <div class="header-right">
+
+<!-- Add icon buttons to the left of the language dropdown -->
+<div class="icon-buttons">
+  <button class="icon-btn"><img src="../assets/login-1.png" alt="Home" /></button>
+  <button class="icon-btn"><img src="../assets/login-2.png" alt="Blog" /></button>
+  <button class="icon-btn"><img src="../assets/login-3.png" alt="User" /></button>
+  <button class="icon-btn"><img src="../assets/login-4.png" alt="Support" /></button>
+</div>
+
+    <div class="language-dropdown">
+      <span class="lang-label">Choose Language</span>
+      
+        <div class="custom-select" id="language-select">
+          <i class="selected-option">
+            <img src="../assets/3.png" alt="English Icon" class="flag-icon">
+          </i>
+
+          <span class="selected-option">English</span>
+          <img src="../assets/4.png" alt="Dropdown Arrow" class="arrow-icon" />
+
+        
+      </div>
+    
+  
+  </header>
+
+
+
+
+<!-- Main Content -->
+<main class="main-content">
+  <div class="login-container">
+    <div class="login-card">
+      <h2 class="card-title">Get your account ready for your demo</h2>
+
+      <!--  Google 登录按钮 -->
+      <button class="social-btn google-btn" onclick="handleGoogleLogin()">
+        <img src="../assets/google-Y.png" alt="Google" class="social-icon" />
+        Continue with Google
+      </button>
+      <!-- Email & Password Form -->
+      <form id="login-form" class="login-form">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="yourname@company.com" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Enter your password" required />
+            <button type="button" class="toggle-password">
+              <img src="../assets/eyes.png" alt="Eye-Icon" class="eye-icon" />
+            </button>
+          </div>
+        </div>
+
+        <a href="#" class="forgot-password">Forgot password?</a>
+
+        <div class="terms-agreement">
+          <input type="checkbox" id="agree" />
+          <label for="agree">By continuing, you're agreeing to our <a href="#">Terms</a> and <a href="#">Privacy policy</a></label>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+
+    <div class="signup-link">
+      Don't have an account yet? <a href="#">Sign up</a>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-left">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Contact Us</a>
+    <a href="#">ALL RIGHTS RESERVED</a>
+    
+  </div>
+  
+
+  <div class="footer-right">
+    <a href="#"><img src="../assets/7.png" alt="FB" class="social-icon fb" /></a>
+    <a href="#"><img src="../assets/6.png" alt="IG" class="social-icon ig" /></a>
+    <a href="#"><img src="../assets/5.png" alt="TW" class="social-icon tw" /></a>
+    <a href="#"><img src="../assets/8.png" alt="YT" class="social-icon yt" /></a>
+  </div>
+
+</footer>
+
+
+
+<script>
+  function handleGoogleLogin() {
+    // 直接跳转后端的Google授权地址
+    window.location.href = "https://1135sb5om7016.vicp.fun/oauth2/authorization/google";
+  }
+</script>
+<script src="../js/login.js"></script>
+  
+  
+
+
+
+
+</body>
+</html>

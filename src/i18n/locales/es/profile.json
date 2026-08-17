@@ -1,0 +1,78 @@
+{
+  "title": "Panel de Perfil",
+  "subtitle": "Gestiona la configuración de tu cuenta y preferencias de viaje",
+  "editProfile": "Información Personal",
+  "username": "Nombre de usuario",
+  "email": "Dirección de correo electrónico",
+  "mobile": "Número de móvil",
+  "dob": "Fecha de nacimiento",
+  "gender": "Género",
+  "male": "Hombre",
+  "female": "Mujer",
+  "update": "Guardar cambios",
+  "cancel": "Cancelar",
+  "updating": "Guardando...",
+  "usernamePlaceholder": "Tu nombre para mostrar",
+  "mobilePlaceholder": "+1 (555) 000-0000",
+  "emailNote": "Contacta con soporte para cambiar tu dirección de correo electrónico.",
+  
+  "header": {
+    "memberSince": "Miembro desde {{year}}",
+    "freeAccount": "Cuenta gratuita",
+    "premiumAccount": "Miembro premium",
+    "uploadPhoto": "Subir foto",
+    "changePhoto": "Cambiar foto",
+    "maxSize": "Máx. 5MB"
+  },
+
+  "avatar": {
+    "uploadTitle": "Foto de perfil",
+    "uploadDesc": "Haz clic para subir o arrastra y suelta",
+    "helperText": "SVG, PNG, JPG o GIF (máx. 5MB)",
+    "remove": "Eliminar foto"
+  },
+
+  "security": {
+    "title": "Configuración de seguridad",
+    "description": "Gestiona tu contraseña y la seguridad de tu cuenta",
+    "currentPassword": "Contraseña actual",
+    "newPassword": "Nueva contraseña",
+    "confirmNewPassword": "Confirmar nueva contraseña",
+    "passwordRequirements": "La contraseña debe tener al menos 8 caracteres",
+    "twoFactor": "Autenticación de dos factores",
+    "twoFactorDesc": "Añade una capa extra de seguridad a tu cuenta",
+    "changePassword": "Cambiar contraseña",
+    "secureAccount": "Tu cuenta está segura"
+  },
+
+  "stats": {
+    "tripsPlanned": "Viajes planificados",
+    "reviewsLeft": "Reseñas dejadas",
+    "savedItems": "Elementos guardados"
+  },
+
+  "validation": {
+    "usernameRequired": "El nombre de usuario es requerido",
+    "emailRequired": "La dirección de correo electrónico es requerida",
+    "emailInvalid": "Por favor ingresa una dirección de correo electrónico válida",
+    "mobileRequired": "El número de móvil es requerido",
+    "dobRequired": "La fecha de nacimiento es requerida",
+    "genderRequired": "Por favor selecciona tu género",
+    "passwordTooShort": "La contraseña debe tener al menos 8 caracteres",
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "notAuthenticated": "Debes estar autenticado para actualizar tu perfil"
+  },
+
+  "contentComingSoon": "El contenido para {{tab}} estará disponible pronto.",
+  "currentPlan": "Plan actual",
+  "loadingPlan": "Cargando detalles del plan...",
+  "planStatus": "Estado",
+  "expiresOn": "Se renueva el",
+  "changePlan": "Cambiar plan",
+  "freePlan": "Plan gratuito",
+  "noActiveSubscription": "Sin suscripción activa",
+  "upgradePlan": "Actualizar a Premium",
+  "manageSubscription": "Gestionar suscripción",
+  "billingCycle": "Ciclo de facturación",
+  "daysRemaining": "días restantes"
+}

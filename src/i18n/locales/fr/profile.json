@@ -1,0 +1,78 @@
+{
+  "title": "Tableau de bord du profil",
+  "subtitle": "Gérez les paramètres de votre compte et vos préférences de voyage",
+  "editProfile": "Informations personnelles",
+  "username": "Nom d'utilisateur",
+  "email": "Adresse e-mail",
+  "mobile": "Numéro de mobile",
+  "dob": "Date de naissance",
+  "gender": "Genre",
+  "male": "Homme",
+  "female": "Femme",
+  "update": "Enregistrer les modifications",
+  "cancel": "Annuler",
+  "updating": "Enregistrement...",
+  "usernamePlaceholder": "Votre nom d'affichage",
+  "mobilePlaceholder": "+1 (555) 000-0000",
+  "emailNote": "Contactez le support pour changer votre adresse e-mail.",
+  
+  "header": {
+    "memberSince": "Membre depuis {{year}}",
+    "freeAccount": "Compte gratuit",
+    "premiumAccount": "Membre premium",
+    "uploadPhoto": "Télécharger une photo",
+    "changePhoto": "Changer de photo",
+    "maxSize": "Max 5 Mo"
+  },
+
+  "avatar": {
+    "uploadTitle": "Photo de profil",
+    "uploadDesc": "Cliquez pour télécharger ou faites glisser et déposez",
+    "helperText": "SVG, PNG, JPG ou GIF (max. 5 Mo)",
+    "remove": "Supprimer la photo"
+  },
+
+  "security": {
+    "title": "Paramètres de sécurité",
+    "description": "Gérez votre mot de passe et la sécurité de votre compte",
+    "currentPassword": "Mot de passe actuel",
+    "newPassword": "Nouveau mot de passe",
+    "confirmNewPassword": "Confirmer le nouveau mot de passe",
+    "passwordRequirements": "Le mot de passe doit contenir au moins 8 caractères",
+    "twoFactor": "Authentification à deux facteurs",
+    "twoFactorDesc": "Ajoutez une couche de sécurité supplémentaire à votre compte",
+    "changePassword": "Changer le mot de passe",
+    "secureAccount": "Votre compte est sécurisé"
+  },
+
+  "stats": {
+    "tripsPlanned": "Voyages planifiés",
+    "reviewsLeft": "Avis laissés",
+    "savedItems": "Éléments sauvegardés"
+  },
+
+  "validation": {
+    "usernameRequired": "Le nom d'utilisateur est requis",
+    "emailRequired": "L'adresse e-mail est requise",
+    "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+    "mobileRequired": "Le numéro de mobile est requis",
+    "dobRequired": "La date de naissance est requise",
+    "genderRequired": "Veuillez sélectionner votre genre",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "notAuthenticated": "Vous devez être connecté pour mettre à jour votre profil"
+  },
+
+  "contentComingSoon": "Le contenu pour {{tab}} sera bientôt disponible.",
+  "currentPlan": "Plan actuel",
+  "loadingPlan": "Chargement des détails du plan...",
+  "planStatus": "Statut",
+  "expiresOn": "Se renouvelle le",
+  "changePlan": "Changer de plan",
+  "freePlan": "Plan gratuit",
+  "noActiveSubscription": "Aucun abonnement actif",
+  "upgradePlan": "Passer à Premium",
+  "manageSubscription": "Gérer l'abonnement",
+  "billingCycle": "Cycle de facturation",
+  "daysRemaining": "jours restants"
+}

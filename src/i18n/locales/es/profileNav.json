@@ -1,0 +1,13 @@
+{
+  "profile": "Perfil",
+  "subscription": "Suscripción",
+  "trips": "Viajes",
+  "notifications": "Notificaciones",
+  "logout": "Cerrar sesión",
+  "title": "Navegación del perfil",
+  "closeMenu": "Cerrar menú",
+  "openMenu": "Abrir menú",
+  "logoutConfirmation": "Confirmar cierre de sesión",
+  "logoutMessage": "¿Estás seguro de que quieres cerrar sesión?",
+  "cancel": "Cancelar"
+}

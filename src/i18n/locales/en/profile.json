@@ -1,0 +1,78 @@
+{
+  "title": "Profile Dashboard",
+  "subtitle": "Manage your account settings and travel preferences",
+  "editProfile": "Personal Information",
+  "username": "Username",
+  "email": "Email Address",
+  "mobile": "Mobile Number",
+  "dob": "Date of Birth",
+  "gender": "Gender",
+  "male": "Male",
+  "female": "Female",
+  "update": "Save Changes",
+  "cancel": "Cancel",
+  "updating": "Saving...",
+  "usernamePlaceholder": "Your display name",
+  "mobilePlaceholder": "+1 (555) 000-0000",
+  "emailNote": "Contact support to change your email address.",
+  
+  "header": {
+    "memberSince": "Member since {{year}}",
+    "freeAccount": "Free Account",
+    "premiumAccount": "Premium Member",
+    "uploadPhoto": "Upload Photo",
+    "changePhoto": "Change Photo",
+    "maxSize": "Max 5MB"
+  },
+
+  "avatar": {
+    "uploadTitle": "Profile Picture",
+    "uploadDesc": "Click to upload or drag and drop",
+    "helperText": "SVG, PNG, JPG or GIF (max. 5MB)",
+    "remove": "Remove photo"
+  },
+
+  "security": {
+    "title": "Security Settings",
+    "description": "Manage your password and account security",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "passwordRequirements": "Password must be at least 8 characters",
+    "twoFactor": "Two-Factor Authentication",
+    "twoFactorDesc": "Add an extra layer of security to your account",
+    "changePassword": "Change Password",
+    "secureAccount": "Your account is secure"
+  },
+
+  "stats": {
+    "tripsPlanned": "Trips Planned",
+    "reviewsLeft": "Reviews Left",
+    "savedItems": "Saved Items"
+  },
+
+  "validation": {
+    "usernameRequired": "Username is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "mobileRequired": "Mobile number is required",
+    "dobRequired": "Date of birth is required",
+    "genderRequired": "Please select your gender",
+    "passwordTooShort": "Password must be at least 8 characters long",
+    "passwordMismatch": "Passwords do not match",
+    "notAuthenticated": "You must be logged in to update your profile"
+  },
+
+  "contentComingSoon": "Content for {{tab}} will be implemented here.",
+  "currentPlan": "Current Plan",
+  "loadingPlan": "Loading plan details...",
+  "planStatus": "Status",
+  "expiresOn": "Renews on",
+  "changePlan": "Change Plan",
+  "freePlan": "Free Plan",
+  "noActiveSubscription": "No active subscription",
+  "upgradePlan": "Upgrade to Premium",
+  "manageSubscription": "Manage Subscription",
+  "billingCycle": "Billing Cycle",
+  "daysRemaining": "days remaining"
+}

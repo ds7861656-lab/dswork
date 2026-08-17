@@ -1,0 +1,22 @@
+{
+  "verifyingAccess": "Verificando Acceso...",
+  "travelJournal": "Diario de Viajes",
+  "signInDescription": "Inicia sesión para ver tu itinerario, comprobar el clima local y rastrear tus estadísticas de viaje.",
+  "signInToContinue": "Iniciar Sesión para Continuar",
+  "noAccount": "¿No tienes una cuenta?",
+  "joinForFree": "Únete gratis",
+  "authenticationRequired": "Autenticación Requerida",
+  "pleaseSignIn": "Por favor, inicia sesión para acceder a esta función.",
+  "signIn": "Iniciar Sesión",
+  "unlockFeature": "Desbloquear {{featureName}}",
+  "upgradeDescription": "Actualiza tu plan para desbloquear viajes ilimitados, recomendaciones de IA y más.",
+  "upgradeNow": "Actualizar Ahora",
+  "pro": "PRO",
+  "lockedFeature": "Función Bloqueada",
+  "upgradeToAccess": "Actualiza para acceder a {{featureName}}",
+  "viewOptions": "Ver Opciones",
+  "unknownFeature": "Función Desconocida",
+  "featureNotFound": "Función no encontrada",
+  "unableToCheckAccess": "No se puede verificar el acceso a la función",
+  "premiumFeature": "Función Premium"
+}

@@ -1,0 +1,574 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a5d5d; /* 深青绿色背景 */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo 部分 */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.logo-container .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.brand-name {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Location Group: "Your Location" + "📍 Paris" with underline */
+.location-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-left: 2rem;
+}
+
+.label {
+  font-size: 1.25rem;
+  color: #ccc; /* 浅灰色提示文字 */
+  font-weight: 400;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid white; /* 白色下划线 */
+}
+
+.location-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: brightness(0) saturate(100%) invert(1); /* 更可靠的白色滤镜 */
+}
+
+.city {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* 右侧导航区 */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  justify-content: flex-end; /* 确保靠右对齐 */
+}
+
+.icon-buttons {
+  display: flex;
+  gap: 3rem; /* Adjust gap between icon buttons */
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-btn img {
+  width: 40px;  /* Set appropriate size for icons */
+  height: 40px;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 靠右对齐 */
+  gap: 0.3rem;
+}
+
+.lang-label {
+  font-size: 1.5rem;
+  color: #ccc; /* 浅灰色提示文字 */
+  font-weight: 400;
+  text-align: right;
+}
+
+/* Custom Select (可点击区域) */
+.custom-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  border-bottom: 2px solid white; /* 白色下划线 */
+}
+
+.custom-select:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Flag Icon */
+.flag-icon {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  filter: invert(1) brightness(100%);
+  vertical-align: middle;
+}
+
+/* Selected Text with Underline */
+.selected-text {
+  font-weight: 500;
+  border-bottom: 2px solid white;
+  padding-bottom: 2px;
+  color: white;
+}
+
+.arrow-icon {
+  width: 18px;                   /* 调整箭头大小 */
+  height: auto;
+  object-fit: contain;
+  filter: invert(1) brightness(100%); /* 如果原图是黑色/灰色，转为白色 */
+  transition: transform 0.2s ease;   /* 支持旋转动画（可选） */
+}
+
+/* Arrow */
+.arrow-down {
+  font-size: 0.8rem;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+/* Dropdown Options */
+.dropdown-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 140px;
+  z-index: 1000;
+}
+
+.dropdown-options.show {
+  display: block;
+}
+
+.option {
+  padding: 0.6rem 1rem;
+  color: #333;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.2s ease;
+}
+
+.option:hover {
+  background: #f0f0f0;
+}
+
+.option-icon {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+
+
+
+
+/* Main Content */
+.content {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .logo-container {
+    order: 1;
+    justify-content: center;
+  }
+
+  .location-group {
+    order: 2;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .label {
+    font-size: 1.2rem;
+  }
+
+  
+
+  .header-right {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .language-dropdown {
+    align-items: center;
+  }
+
+  .lang-label {
+    display: none; /* 小屏隐藏 "Choose Language" */
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+  background: linear-gradient(135deg, #e6f7f7, #f0f8ff);
+  
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+}
+
+.login-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 2.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.social-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  color: #333;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 0.8rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: left; /* 确保文本左对齐 */
+}
+
+.social-btn:hover {
+  background: #eef5f5;
+  border-color: #b3d9d9;
+}
+
+.google-btn {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.facebook-btn {
+  background: #f5f5f5;
+  color: #333;
+}
+
+
+
+.social-icon {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.login-form {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 1.8rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size:1.275rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.35rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: #1a5d5d;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+}
+
+.eye-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  vertical-align: middle;
+
+  /* 如果你的图标是黑色/深色，而背景是浅色，可加滤镜提亮或改色 */
+  /* filter: brightness(0) invert(1);  白色图标 */
+  /* filter: opacity(0.8); */
+}
+
+.forgot-password {
+  display: block;
+  margin: 0.8rem 0;
+  font-size: 1.275rem;
+  color: #1a5d5d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: #007bff;
+}
+
+.terms-agreement {
+  margin: 1rem 0;
+  font-size:1.125rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terms-agreement input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.terms-agreement a {
+  color: #1a5d5d;
+  text-decoration: underline;
+}
+
+.login-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background: #1a5d5d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.35rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #144b4b;
+}
+
+.signup-link {
+  margin-top: 1.5rem;
+  font-size: 1.275rem;
+  color: #666;
+  text-align: center;
+}
+
+.signup-link a {
+  color: #1a5d5d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #f0f8ff;
+  border-top: 1px solid #ddd;
+  font-size: 1.35rem;
+  color: #333;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-left a,
+.footer-center p,
+.footer-right a {
+  color: #1a5d5d;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-left a:hover,
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-right i {
+  font-size: 1.8rem;
+  margin-left: 0.8rem;
+  cursor: pointer;
+}
+
+
+/* 社交图标容器 */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* 图标之间的间距 */
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+}
+
+/* 所有社交图标统一设置 */
+.social-icon {
+  width: 36px;     /* 推荐尺寸：24x24px 是清晰又不过大的选择 */
+  height: 36px;
+  object-fit: contain;
+  transition: all 0.2s ease;
+  opacity: 0.8;    /* 稍微柔和一点，不刺眼 */
+  margin-right: 0.75rem; /* 根据实际情况调整间距 */
+}
+
+/* 鼠标悬停效果 */
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.1);
+  filter: brightness(0) saturate(100%) invert(17%) sepia(30%) saturate(400%) hue-rotate(170deg) brightness(90%) contrast(95%);
+}
+
+/* 额外：点击时轻微下沉 */
+.social-icon:active {
+  transform: translateY(0) scale(0.95);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .login-card {
+    padding: 1.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+}

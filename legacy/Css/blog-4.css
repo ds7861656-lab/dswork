@@ -1,0 +1,462 @@
+/* ========== Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f8f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* ========== Header 保留原样 ========== */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a5d5d;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+  }
+  
+  .brand-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .location-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1.5rem;
+  }
+  
+  .label {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .location-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+  }
+  
+  .location-icon {
+    width: 14px;
+    height: 14px;
+    filter: invert(1);
+  }
+  
+  .city {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
+  .header-btn, .publish-btn, .history-btn {
+    background-color: white;
+    color: #1a5d5d;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .header-btn:hover,
+  .publish-btn:hover,
+  .history-btn:hover {
+    background-color: #e0f7f7;
+    transform: translateY(-1px);
+  }
+  
+  .history-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+  }
+  
+  .user-avatar:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ========== Main Editor 区域 ========== */
+  .main-content {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem 4rem;
+    background: #f5f9fa;
+    min-height: calc(100vh - 120px);
+  }
+  
+  .editor-container {
+    position: relative;  /* 使容器能够包含绝对定位的元素 */
+    background: #fff;
+    border-radius: 28px;
+    padding: 4rem 6rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ 
+  
+  /* Back Button */
+.back-btn {
+  background-color: #fff;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: absolute;  /* 仍然使用绝对定位 */
+  right: 20px;         /* 距离右侧 20px */
+  top: 20px;           /* 距离顶部 20px */
+  display: inline-flex; /* 使用 flexbox 布局 */
+  align-items: center;  /* 垂直居中对齐内容 */
+  justify-content: center; /* 水平居中对齐内容（可选，确保按钮内内容居中） */
+}
+
+/* 箭头图标样式 */
+.back-btn .arrow-icon {
+  width: 16px;  /* 控制箭头大小 */
+  height: 16px;
+  margin-right: 8px; /* 给箭头和文字之间加点间距 */
+}
+
+/* 鼠标悬停时的样式 */
+.back-btn:hover {
+  background-color: #f5f9fa;
+  transform: translateY(-2px);
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ===== Toolbar（居中 + 间距紧凑）===== */
+  .toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 0.6rem;  /* ✅ 距离 Showcase 更近 */
+    margin-bottom: 1.2rem;
+  }
+  
+  .toolbar button {
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .toolbar button:hover {
+    background-color: #f3f7f7;
+    transform: translateY(-1px);
+  }
+  
+  .toolbar button.active {
+    background-color: #e6f0ef; /* ✅ 柔和灰绿色 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .toolbar img {
+    width: 16px;
+    height: 16px;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+  }
+  
+  .toolbar button:hover img {
+    opacity: 1;
+  }
+  
+  /* ===== Text Editor ===== */
+  .post-editor {
+    min-height: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #444;
+    background: transparent;
+    padding-top: 0.5rem;
+    text-align: left;
+  }
+
+
+/* =============================== Blog Preview Section =============================== */
+.blog-preview {
+    background-color: #f6f9fb;
+    border-radius: 20px;
+    padding: 40px 60px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+  }
+  
+  /* ===== Title ===== */
+  .blog-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* ===== Image ===== */
+  .blog-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .blog-image {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .photo-credit {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 8px;
+    text-align: center;
+  }
+  
+  /* ===== Text Content ===== */
+  .blog-body {
+    margin-top: 30px;
+  }
+  
+  .blog-subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .blog-paragraph {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+  }
+  
+
+
+
+
+
+  
+  /* ===== Text Editor ===== */
+  .story-input {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .add-icon {
+    width: 48px;
+    height: 48px;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+  }
+  
+  .post-editor {
+    min-height: 24px;
+    height: 24px;
+    width: 336px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #999;
+    background: transparent;
+    text-align: left;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  
+  
+  
+  
+  /* ===== Footer（保留原样）===== */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #f0f8ff;
+    border-top: 1px solid #ddd;
+    font-size: 1.35rem;
+    color: #333;
+  }
+  
+  .footer-left,
+  .footer-right {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left a,
+  .footer-right a {
+    color: #1a5d5d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-left a:hover,
+  .footer-right a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+  }
+  
+  .social-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* ===== Logout Modal 保留 ===== */
+  .logout-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .logout-modal.hidden {
+    display: none;
+  }
+  
+  .logout-dialog {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    width: 320px;
+  }
+  
+  .logout-dialog-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+  }
+  
+  .logout-dialog h3 {
+    font-size: 1.25rem;
+    color: #1a5d5d;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logout-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+  }
+  
+  .confirm-btn {
+    background-color: #1a5d5d;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #174f4f;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #ccc;
+  }
+  

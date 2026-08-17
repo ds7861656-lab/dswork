@@ -1,0 +1,43 @@
+{
+  "bestValue": "最佳价值",
+  "popular": "热门",
+  "off": "折扣",
+  "currentPlan": "当前计划",
+  "selectPlan": "选择计划",
+  "processing": "处理中...",
+  "comparePlans": "比较计划",
+  "plans": {
+    "week": {
+      "name": "周",
+      "period": "每周"
+    },
+    "month": {
+      "name": "月",
+      "period": "每月"
+    },
+    "season": {
+      "name": "季",
+      "period": "每月"
+    },
+    "year": {
+      "name": "年",
+      "period": "每月",
+      "badgeText": "最受欢迎"
+    }
+  },
+  "features": {
+    "basicTripPlanning": "基本行程规划",
+    "limitedDestinations": "有限目的地",
+    "emailSupport": "邮件支持",
+    "mobileAppAccess": "移动应用访问",
+    "advancedTripPlanning": "高级行程规划",
+    "unlimitedDestinations": "无限目的地",
+    "priorityEmailSupport": "优先邮件支持",
+    "premiumTripPlanning": "高级行程规划",
+    "vipDestinations": "VIP目的地访问",
+    "phoneSupport": "24/7电话支持",
+    "ultimateTripPlanning": "终极行程规划",
+    "exclusiveDestinations": "独家目的地",
+    "dedicatedConcierge": "专属礼宾服务"
+  }
+}

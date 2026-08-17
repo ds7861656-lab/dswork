@@ -1,0 +1,13 @@
+{
+  "profile": "الملف الشخصي",
+  "subscription": "الاشتراك",
+  "trips": "الرحلات",
+  "notifications": "الإشعارات",
+  "logout": "تسجيل الخروج",
+  "title": "تنقل الملف الشخصي",
+  "closeMenu": "إغلاق القائمة",
+  "openMenu": "فتح القائمة",
+  "logoutConfirmation": "تأكيد تسجيل الخروج",
+  "logoutMessage": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+  "cancel": "إلغاء"
+}

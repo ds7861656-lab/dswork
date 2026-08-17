@@ -1,0 +1,22 @@
+{
+  "verifyingAccess": "جاري التحقق من الوصول...",
+  "travelJournal": "مذكرة السفر",
+  "signInDescription": "سجل الدخول لعرض مسار رحلتك، التحقق من الطقس المحلي، وتتبع إحصائيات سفرك.",
+  "signInToContinue": "سجل الدخول للمتابعة",
+  "noAccount": "ليس لديك حساب؟",
+  "joinForFree": "انضم مجاناً",
+  "authenticationRequired": "مطلوب المصادقة",
+  "pleaseSignIn": "يرجى تسجيل الدخول للوصول إلى هذه الميزة.",
+  "signIn": "تسجيل الدخول",
+  "unlockFeature": "فتح {{featureName}}",
+  "upgradeDescription": "قم بترقية خطتك لفتح رحلات غير محدودة، توصيات الذكاء الاصطناعي، والمزيد.",
+  "upgradeNow": "ترقية الآن",
+  "pro": "احترافي",
+  "lockedFeature": "الميزة مقفلة",
+  "upgradeToAccess": "ترقية للوصول إلى {{featureName}}",
+  "viewOptions": "عرض الخيارات",
+  "unknownFeature": "ميزة غير معروفة",
+  "featureNotFound": "الميزة غير موجودة",
+  "unableToCheckAccess": "غير قادر على التحقق من الوصول إلى الميزة",
+  "premiumFeature": "ميزة مميزة"
+}

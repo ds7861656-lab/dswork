@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afreshtrip - Blog Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Css/blog-4.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="../assets/tubiao.png" alt="Afreshtrip Logo" class="logo" />
+      <span class="brand-name">Afreshtrip</span>
+
+      <div class="location-group">
+        <span class="label">Your Location</span>
+        <div class="location-info">
+          <img src="../assets/weizhi.png" alt="Location Icon" class="location-icon" />
+          <span class="city">Paris</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button class="header-btn draft-btn">Close and Save Draft</button>
+      <button class="header-btn publish-btn">Publish</button>
+      <button class="history-btn" title="View History">
+        <img src="../assets/history.png" alt="History" class="history-icon" />
+      </button>
+      <div class="user-menu">
+        <img src="../assets/avater.png" alt="User Avatar" class="user-avatar" id="avatar-btn">
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ Logout Modal -->
+  <div id="logout-modal" class="logout-modal hidden">
+    <div class="logout-dialog">
+      <img src="../assets/exit.png" alt="Logout Icon" class="logout-dialog-icon" />
+      <h3>Are you sure you want to log out?</h3>
+      <div class="logout-actions">
+        <button id="confirm-logout" class="btn confirm-btn">Confirm</button>
+        <button id="cancel-logout" class="btn cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Main Editor Section ===== -->
+  <main class="main-content">
+    <div class="editor-container">
+
+      <button class="back-btn"><img src="../assets/g1-0.png" alt="Arrow" class="arrow-icon" />Back</button>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <button title="Heading 1"><img src="../assets/image-2.png" alt="H1" /></button>
+        <button title="Heading 2"><img src="../assets/image-3.png" alt="H2" /></button>
+        <button title="Paragraph"><img src="../assets/image-4.png" alt="P" /></button>
+        <button title="Bold"><img src="../assets/image-5.png" alt="B" /></button>
+        <button title="Italic"><img src="../assets/image-6.png" alt="I" /></button>
+        <button title="Bullet List"><img src="../assets/image-7.png" alt="•" /></button>
+        <button title="Numbered List"><img src="../assets/image-7.png" alt="1." /></button>
+        <button title="Insert Link"><img src="../assets/image-8.png" alt="Link" /></button>
+        <button title="Insert Image"><img src="../assets/image-9.png" alt="Image" /></button>
+      </div>
+
+
+<!-- ===== Blog Preview Section ===== -->
+<section class="blog-preview">
+    <h1 class="blog-title">Tennessee Titans</h1>
+  
+    <!-- 图片部分 -->
+    <div class="blog-image-container">
+      <img src="../assets/g4-1.png" alt="Tennessee Titans" class="blog-image" />
+      <p class="photo-credit">Photo by: Matt Walben / Sportsblog</p>
+    </div>
+  
+    <!-- 正文部分 -->
+    <div class="blog-body">
+      <h2 class="blog-subtitle">T1 text formatting</h2>
+      <p class="blog-paragraph">
+        Paragraph text formatting. Paragraph text formatting. Paragraph text formatting.
+        Paragraph text formatting. Paragraph text formatting. Paragraph text formatting.
+        Paragraph text formatting. Paragraph text formatting. Paragraph text formatting.
+        Paragraph text formatting. Paragraph text formatting. Paragraph text formatting.
+      </p>
+    </div>
+
+<!-- 第二张中等图片 -->
+<div class="blog-image-container small">
+    <img src="../assets/g4-2.png" alt="Hockey Game" class="blog-image" />
+    <p class="photo-credit">Getty Photo</p>
+  </div>
+
+  <!-- 第二段文字 -->
+  <div class="blog-section">
+    <h2 class="blog-subtitle">T2 text formatting</h2>
+    <p class="blog-paragraph">
+      Paragraph text formatting. Paragraph text formatting. Paragraph text formatting.
+      Paragraph text formatting. Paragraph text formatting. Paragraph text formatting.
+      Paragraph text formatting. Paragraph text formatting. Paragraph text formatting.
+    </p>
+</div>
+
+  </section>
+  
+
+      
+
+      <!-- Text Editor -->
+      <div class="story-input">
+        <img src="../assets/image-10.png" alt="Add" class="add-icon" />
+        <div id="post-editor" class="post-editor" contenteditable="true">Tell your story...</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer-left">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact Us</a>
+      <a href="#">ALL RIGHTS RESERVED</a>
+    </div>
+    <div class="footer-right">
+      <a href="#"><img src="../assets/7.png" alt="FB" class="social-icon" /></a>
+      <a href="#"><img src="../assets/6.png" alt="IG" class="social-icon" /></a>
+      <a href="#"><img src="../assets/5.png" alt="TW" class="social-icon" /></a>
+      <a href="#"><img src="../assets/8.png" alt="YT" class="social-icon" /></a>
+    </div>
+  </footer>
+
+  <script src="../js/blog-1.js"></script>
+</body>
+</html>
