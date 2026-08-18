@@ -332,6 +332,9 @@ const Header: React.FC<HeaderProps> = ({
                         <Link to="/trips" className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700" onClick={() => setIsUserDropdownOpen(false)}>
                           {t('profileNav.trips')}
                         </Link>
+                        <Link to="/profile?tab=bookings" className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700" onClick={() => setIsUserDropdownOpen(false)}>
+                          {t('profileNav.bookings')}
+                        </Link>
                         
                         <div className="border-t border-gray-100 my-1"></div>
                         
@@ -442,6 +445,9 @@ const Header: React.FC<HeaderProps> = ({
               
                 <Link to="/trips" className="block px-3 py-2 text-teal-100 hover:bg-teal-800 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
                   {t('profileNav.trips')}
+                </Link>
+                <Link to="/profile?tab=bookings" className="block px-3 py-2 text-teal-100 hover:bg-teal-800 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                  {t('profileNav.bookings')}
                 </Link>
                 <Link to="/blog/create" className="block px-3 py-2 text-teal-100 hover:bg-teal-800 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
                   {t('header.createBlogPost')}

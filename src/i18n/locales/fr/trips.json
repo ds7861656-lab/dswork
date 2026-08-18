@@ -354,6 +354,6 @@
   "alipayError": "Erreur de paiement",
   "alipayRetry": "Réessayer",
   "alipayCheckOrderStatus": "Vérifier le statut de la commande",
-  "alipayKeepOpen": "Gardez cette page ouverte — le paiement est détecté automatiquement"
-
+  "alipayKeepOpen": "Gardez cette page ouverte — le paiement est détecté automatiquement",
+  "myBookings": "Mes Réservations"
 }

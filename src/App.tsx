@@ -37,6 +37,7 @@ import PaymentResult from './pages/PaymentResult';
 import CarRentals from './pages/CarRentals';
 import CarRentalDetails from './pages/CarRentalDetails';
 import PaymentResultTest from './pages/PaymentResultTest';
+import Activity from './pages/Activity';
 
 function App() {
   return (
@@ -71,6 +72,7 @@ function App() {
           <Route path="/payment/alipay" element={<PageErrorBoundary pageName="alipaypayment"><AlipayPayment /></PageErrorBoundary>} />
           <Route path="/payment/success" element={<PageErrorBoundary pageName="paymentsuccess"><PaymentSuccess /></PageErrorBoundary>} />
           <Route path="/payment/result" element={<PageErrorBoundary pageName="paymentresult"><PaymentResult /></PageErrorBoundary>} />
+          <Route path="/activity/:id" element={<PageErrorBoundary pageName="activity"><Activity /></PageErrorBoundary>} />
           
           {/* Other Pages */}
           <Route path="/trips" element={<PageErrorBoundary pageName="trips"><Trips /></PageErrorBoundary>} />

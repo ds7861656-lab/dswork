@@ -2,6 +2,7 @@
   "profile": "Profile",
   "subscription": "Subscription",
   "trips": "Trips",
+  "bookings": "Bookings",
   "notifications": "Notifications",
   "logout": "Logout",
   "title": "Profile Navigation",

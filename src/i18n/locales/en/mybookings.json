@@ -1,0 +1,12 @@
+{
+  "bookingDate": "Booking Date",
+  "date": "Date",
+  "place": "People",
+  "totalPrice": "Total Price",
+  "rmb": "Rmb",
+  "refund": "Refund",
+  "rebook": "Rebook",
+  "bookingsSubtitle": "Stay updated with your latest bookings",
+  "noBookings": "No bookings found",
+  "noBookingsDesc": "You have no bookings yet. Stay tuned!"
+}

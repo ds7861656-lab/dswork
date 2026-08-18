@@ -343,5 +343,6 @@
   "alipayError": "支付错误",
   "alipayRetry": "重试",
   "alipayCheckOrderStatus": "检查订单状态",
-  "alipayKeepOpen": "请保持此页面打开 — 支付结果将自动检测"
+  "alipayKeepOpen": "请保持此页面打开 — 支付结果将自动检测",
+  "myBookings": "我的预定"
 }

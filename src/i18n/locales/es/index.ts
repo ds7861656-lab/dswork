@@ -14,6 +14,7 @@ import trips from './trips.json';
 import notifications from './notifications.json';
 import common from './common.json';
 import featureGate from './featureGate.json';
+import mybookings from './mybookings.json';
 
 const es = {
   header,
@@ -32,6 +33,7 @@ const es = {
   notifications,
   common,
   featureGate,
+  mybookings,
 };
 
 export default es;

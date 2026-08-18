@@ -1,0 +1,12 @@
+{
+  "bookingDate": "Fecha de reserva",
+  "date": "Fecha",
+  "place": "Personas",
+  "totalPrice": "Precio total",
+  "rmb": "Rmb",
+  "refund": "Reembolso",
+  "rebook": "Volver a reservar",
+  "bookingsSubtitle": "Manténgase actualizado con sus últimas reservas",
+  "noBookings": "No se encontraron reservas",
+  "noBookingsDesc": "Aún no tienes reservas. ¡Mantente al tanto!"
+}

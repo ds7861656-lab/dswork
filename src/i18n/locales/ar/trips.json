@@ -353,5 +353,6 @@
   "alipayError": "خطأ في الدفع",
   "alipayRetry": "حاول مرة أخرى",
   "alipayCheckOrderStatus": "تحقق من حالة الطلب",
-  "alipayKeepOpen": "احتفظ بهذه الصفحة مفتوحة — يتم اكتشاف الدفع تلقائيًا"
+  "alipayKeepOpen": "احتفظ بهذه الصفحة مفتوحة — يتم اكتشاف الدفع تلقائيًا",
+  "myBookings": "حجوزاتي"
 }

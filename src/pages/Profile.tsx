@@ -9,6 +9,7 @@ import {
   CreditCardIcon,
   MapPinIcon,
   BellIcon,
+  ShoppingCartIcon,
   ArrowRightOnRectangleIcon
 } from '@heroicons/react/24/outline';
 
@@ -23,16 +24,17 @@ import { useSnackbar } from '../contexts/SnackbarContext';
 import ProfileTab from '../components/profile/ProfileTab';
 import SubscriptionTab from '../components/profile/SubscriptionTab';
 import MyTripsTab from '../components/profile/MyTripsTab';
+import MyBookingsTab from '../components/profile/MyBookingsTab';
 import NotificationTab from '../components/profile/NotificationTab';
 
-type TabId = 'profile' | 'subscription' | 'trips' | 'notification';
+type TabId = 'profile' | 'subscription' | 'trips' | 'bookings' | 'notification';
 
 const Profile: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   
-  const { updateUserProfile, refreshUserFeatures, logout, userFeatures } = useAuth();
+  const { updateUserProfile, logout } = useAuth();
   const { showSuccess, showError } = useSnackbar();
   
   // Get initial tab from URL
@@ -58,6 +60,11 @@ const Profile: React.FC = () => {
       icon: MapPinIcon
     },
     {
+      id: 'bookings' as TabId,
+      label: t('trips.myBookings') || 'My Bookings',
+      icon: ShoppingCartIcon
+    },
+    {
       id: 'notification' as TabId,
       label: t('trips.notifications') || 'Notification',
       icon: BellIcon
@@ -65,7 +72,7 @@ const Profile: React.FC = () => {
   ];
 
   // ✅ Handle profile update - Chinese backend API only
-  const handleProfileUpdate = async (formData: any) => {
+  const handleProfileUpdate = async (formData: { nickname?: string; phone?: string; gender?: string; birthDate?: string; imageurl?: string; [key: string]: unknown }) => {
     setIsUpdatingProfile(true);
 
     try {
@@ -102,7 +109,7 @@ const Profile: React.FC = () => {
     try {
       await logout();
       navigate('/');
-    } catch (error) {
+    } catch {
       showError(t('common.error.logoutFailed') || 'Logout failed');
     }
   };
@@ -121,6 +128,8 @@ const Profile: React.FC = () => {
         return <SubscriptionTab />;
       case 'trips':
         return <MyTripsTab />;
+      case 'bookings':
+        return <MyBookingsTab />;
       case 'notification':
         return <NotificationTab />;
       default:

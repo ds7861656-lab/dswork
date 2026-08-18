@@ -1,0 +1,12 @@
+{
+  "bookingDate": "预定日期",
+  "date": "日期",
+  "place": "人数",
+  "totalPrice": "总价",
+  "rmb": "人民币",
+  "refund": "退款",
+  "rebook": "重新预定",
+  "bookingsSubtitle": "查看您的最新预定信息",
+  "noBookings": "未找到预定消息",
+  "noBookingsDesc": "您暂无预定消息，敬请期待！"
+}
