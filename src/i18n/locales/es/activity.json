@@ -15,5 +15,67 @@
     "person": "/ persona",
     "boat": "/ barco ({{count}} personas)"
   },
-  "details": "Ver detalles"
+  "details": "Ver detalles",
+  "notFound": "Actividad no encontrada",
+  "notFoundDesc": "La actividad solicitada no existe o ha sido eliminada.",
+  "backToList": "Volver a actividades",
+  "person": "persona",
+
+  "capacity": {
+    "onePlaceBoat": "Una plaza en el barco",
+    "privateBoat10": "Barco privado para hasta {{count}}",
+    "onePlaceFilm": "Una plaza en el grupo de filmación"
+  },
+  "durationLabel": "Duración",
+  "ageLabel": "Edades",
+
+  "liveGuide": "Guía en vivo",
+
+  "highlights": {
+    "snorkeling": "Disponible snorkel, natación y apnea.",
+    "equipment": "Equipo gratuito: máscaras, snorkels, chalecos salvavidas y aletas cortas incluidos.",
+    "underwaterFilm": "Filmación submarina profesional y edición cinematográfica incluidas.",
+    "finRentalDomestic": "Alquiler de aletas largas: ¥100/día para modelos domésticos.",
+    "finRentalBranded": "Alquiler de aletas largas: ¥200/día para modelos de marca (C4, DIVER, Mantra)."
+  },
+  "equipment": {
+    "masks": "Incluye máscaras y equipo de snorkel.",
+    "lifeJackets": "Incluye chalecos salvavidas.",
+    "cameraGear": "Cámara submarina profesional e iluminación incluidas."
+  },
+
+  "goproFilm": {
+    "title": "Película GoPro",
+    "service": "Servicio de filmación GoPro"
+  },
+  "goproFilm_service": "Servicio de filmación GoPro",
+
+  "selectionDate": "Selección de fecha",
+  "bookingDetail": "Detalles de la reserva",
+  "range": {
+    "start": "Inicio",
+    "end": "Fin"
+  },
+  "placeReservation": "Lugar de reserva",
+  "enterContact": "Introducir contacto",
+  "firstName": "Nombre",
+  "lastName": "Apellido",
+  "email": "Correo electrónico",
+  "mobilePhone": "Teléfono móvil",
+
+  "package": {
+    "subtitle": "Seguro de viaje individual todo incluido",
+    "items": {
+      "day4Sea": "Incluye 4 días de avistamiento de ballenas y fotografía en el mar",
+      "landSession": "1 sesión de fotografía terrestre",
+      "accommodation": "6 noches de alojamiento (2 personas por habitación)",
+      "airportTransfer": "Servicio de traslado al aeropuerto",
+      "freeDay": "1 día de actividad libre",
+      "underwater9": "9 fotos submarinas retocadas",
+      "land3": "3 fotos terrestres retocadas",
+      "totalPhotos": "12 fotos retocadas en total",
+      "video": "1 clip de video con corrección de color",
+      "singleSupplement": "Se requiere un suplemento individual de 200 USD para 1 persona en 1 habitación durante 6 noches"
+    }
+  }
 }

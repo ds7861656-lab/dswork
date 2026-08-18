@@ -15,5 +15,67 @@
     "person": "/人",
     "boat": "/船（{{count}}人）"
   },
-  "details": "查看详情"
+  "details": "查看详情",
+  "notFound": "未找到活动",
+  "notFoundDesc": "您请求的活动不存在或已被移除。",
+  "backToList": "返回活动列表",
+  "person": "person",
+
+  "capacity": {
+    "onePlaceBoat": "可拼船",
+    "privateBoat10": "可乘 10 人包船",
+    "onePlaceFilm": "摄影团一个位置"
+  },
+  "durationLabel": "时长",
+  "ageLabel": "年龄",
+
+  "liveGuide": "现场导览语言",
+
+  "highlights": {
+    "snorkeling": "可浮潜、游泳和自由潜水。",
+    "equipment": "免费提供面镜、呼吸管、救生衣和短脚蹼。",
+    "underwaterFilm": "水下专业跟拍和电影剪辑。",
+    "finRentalDomestic": "长脚蹼租赁：国产品牌 ¥100/天。",
+    "finRentalBranded": "长脚蹼租赁：C4 / DIVER / Mantra 等品牌 ¥200/天。"
+  },
+  "equipment": {
+    "masks": "包含面镜和呼吸管装备。",
+    "lifeJackets": "包含救生衣。",
+    "cameraGear": "提供专业水下相机及灯光设备。"
+  },
+
+  "goproFilm": {
+    "title": "GoPro 摄影",
+    "service": "GoPro 全程跟拍服务"
+  },
+  "goproFilm_service": "GoPro 全程跟拍服务",
+  "person": "人",
+  "bookingDetail": "预定详情",
+  "selectionDate": "选择日期",
+  "range": {
+    "start": "开始日期",
+    "end": "结束日期"
+  },
+  "placeReservation": "预订人数",
+  "enterContact": "填写联系信息",
+  "firstName": "名（First Name）",
+  "lastName": "姓（Last Name）",
+  "email": "邮箱（Email）",
+  "mobilePhone": "手机号（Mobile Phone）",
+
+  "package": {
+    "subtitle": "全包个人旅行保险",
+    "items": {
+      "day4Sea": "包含 4 天海上观鲸与摄影",
+      "landSession": "1 场陆地摄影",
+      "accommodation": "6 晚住宿（2 人/间）",
+      "airportTransfer": "机场接送服务",
+      "freeDay": "1 天自由活动日",
+      "underwater9": "9 张精修水下照片",
+      "land3": "3 张精修陆地照片",
+      "totalPhotos": "共 12 张精修照片",
+      "video": "1 条调色视频短片",
+      "singleSupplement": "单人入住 6 晚需补单房差 200 美元"
+    }
+  }
 }

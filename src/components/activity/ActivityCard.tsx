@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { StarIcon } from '@heroicons/react/24/solid';
 import { type Activity } from '../../types/activity';
@@ -8,7 +9,13 @@ interface ActivityCardProps {
 }
 
 const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
+
+  const handleBookClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigate(`/activity/${activity.id}`);
+  };
 
   return (
     <div className="flex flex-col">
@@ -47,7 +54,10 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
               {t(`activity.units.${activity.unit}`, { count: activity.unitCount || 0 })}
             </span>
           </div>
-          <button className="bg-[#2d4b5a] text-white px-5 sm:px-6 py-2.5 rounded-xl font-medium hover:bg-[#1f3642] transition-colors whitespace-nowrap shrink-0">
+          <button
+            onClick={handleBookClick}
+            className="bg-[#2d4b5a] text-white px-5 sm:px-6 py-2.5 rounded-xl font-medium hover:bg-[#1f3642] transition-colors whitespace-nowrap shrink-0"
+          >
             {t('activity.bookNow')}
           </button>
         </div>

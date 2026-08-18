@@ -15,5 +15,67 @@
     "person": "/ person",
     "boat": "/ boat ({{count}} people)"
   },
-  "details": "See details"
+  "details": "See details",
+  "notFound": "Activity not found",
+  "notFoundDesc": "The requested activity does not exist or has been removed.",
+  "backToList": "Back to Activities",
+  "person": "person",
+
+  "capacity": {
+    "onePlaceBoat": "One place in boat",
+    "privateBoat10": "Private boat for up to {{count}}",
+    "onePlaceFilm": "One place in filming group"
+  },
+  "durationLabel": "Duration",
+  "ageLabel": "Ages",
+
+  "liveGuide": "Live guide",
+
+  "highlights": {
+    "snorkeling": "Snorkeling, swimming and freediving are available.",
+    "equipment": "Complimentary equipment including masks, snorkels, life jackets and short fins are provided.",
+    "underwaterFilm": "Professional underwater filming and cinematic editing included.",
+    "finRentalDomestic": "Long fin rental: ¥100/day for domestic models.",
+    "finRentalBranded": "Long fin rental: ¥200/day for branded models (C4, DIVER, Mantra)."
+  },
+  "equipment": {
+    "masks": "Includes masks and snorkel gear.",
+    "lifeJackets": "Includes life jackets.",
+    "cameraGear": "Professional underwater camera and lighting gear provided."
+  },
+
+  "goproFilm": {
+    "title": "GoPro Film",
+    "service": "GoPro filming service"
+  },
+  "goproFilm_service": "GoPro filming service",
+
+  "selectionDate": "Selection date",
+  "bookingDetail": "Booking Details",
+  "range": {
+    "start": "Start",
+    "end": "End"
+  },
+  "placeReservation": "Place reservation",
+  "enterContact": "Enter contact",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "mobilePhone": "Mobile Phone",
+
+  "package": {
+    "subtitle": "All-inclusive Individual Travel Insurance",
+    "items": {
+      "day4Sea": "Includes 4 days of whale-watching and photography at sea",
+      "landSession": "1 land photography session",
+      "accommodation": "6 nights of accommodation (2 people per room)",
+      "airportTransfer": "Airport transfer service",
+      "freeDay": "1 free activity day",
+      "underwater9": "9 retouched underwater photos",
+      "land3": "3 retouched land photos",
+      "totalPhotos": "12 retouched photos in total",
+      "video": "1 video clip with color grading",
+      "singleSupplement": "A single supplement of 200 USD is required for 1 person in 1 room for 6 nights"
+    }
+  }
 }

@@ -15,5 +15,67 @@
     "person": "/ personne",
     "boat": "/ bateau ({{count}} personnes)"
   },
-  "details": "Voir les détails"
+  "details": "Voir les détails",
+  "notFound": "Activité introuvable",
+  "notFoundDesc": "L'activité demandée n'existe pas ou a été supprimée.",
+  "backToList": "Retour aux activités",
+  "person": "personne",
+
+  "capacity": {
+    "onePlaceBoat": "Une place sur le bateau",
+    "privateBoat10": "Bateau privé jusqu'à {{count}}",
+    "onePlaceFilm": "Une place dans le groupe de tournage"
+  },
+  "durationLabel": "Durée",
+  "ageLabel": "Âges",
+
+  "liveGuide": "Guide en direct",
+
+  "highlights": {
+    "snorkeling": "Snorkeling, natation et apnée disponibles.",
+    "equipment": "Équipement gratuit : masques, tubas, gilets de sauvetage et palmes courtes fournis.",
+    "underwaterFilm": "Tournage sous-marin professionnel et montage cinématographique inclus.",
+    "finRentalDomestic": "Location de palmes longues : ¥100/jour pour modèles domestiques.",
+    "finRentalBranded": "Location de palmes longues : ¥200/jour pour modèles de marque (C4, DIVER, Mantra)."
+  },
+  "equipment": {
+    "masks": "Masques et tubas inclus.",
+    "lifeJackets": "Gilets de sauvetage inclus.",
+    "cameraGear": "Caméra sous-marine professionnelle et éclairage fournis."
+  },
+
+  "goproFilm": {
+    "title": "Film GoPro",
+    "service": "Service de tournage GoPro"
+  },
+  "goproFilm_service": "Service de tournage GoPro",
+
+  "selectionDate": "Sélection de la date",
+  "bookingDetail": "Détails de la réservation",
+  "range": {
+    "start": "Début",
+    "end": "Fin"
+  },
+  "placeReservation": "Place de réservation",
+  "enterContact": "Entrer en contact",
+  "firstName": "Prénom",
+  "lastName": "Nom",
+  "email": "E-mail",
+  "mobilePhone": "Téléphone portable",
+
+  "package": {
+    "subtitle": "Assurance voyage individuelle tout inclus",
+    "items": {
+      "day4Sea": "Inclut 4 jours d'observation des baleines et de photographie en mer",
+      "landSession": "1 séance de photographie terrestre",
+      "accommodation": "6 nuits d'hébergement (2 personnes par chambre)",
+      "airportTransfer": "Service de transfert aéroport",
+      "freeDay": "1 jour d'activité libre",
+      "underwater9": "9 photos sous-marines retouchées",
+      "land3": "3 photos terrestres retouchées",
+      "totalPhotos": "12 photos retouchées au total",
+      "video": "1 extrait vidéo avec étalonnage",
+      "singleSupplement": "Un supplément individuel de 200 USD est requis pour 1 personne dans 1 chambre pendant 6 nuits"
+    }
+  }
 }
