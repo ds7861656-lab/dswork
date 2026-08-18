@@ -1,5 +1,4 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import Header from '../components/Header';
@@ -10,11 +9,10 @@ import { mockActivities } from '../data/mockActivities';
 import EmptyState from '../components/ui/EmptyState';
 
 const Activity: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
   const { t } = useTranslation();
 
-  // 根据路由 id (对应的就是 galleryId) 筛选出属于这个画廊的活动
-  const currentActivities = mockActivities.filter(activity => activity.galleryId === id);
+  // 固定展示前 3 个活动
+  const currentActivities = mockActivities.slice(0, 3);
 
   return (
     <div className="min-h-screen bg-gray-50/50 flex flex-col">
@@ -23,15 +21,14 @@ const Activity: React.FC = () => {
       <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
           items={[
-            { label: t('header.home') || 'Home', href: '/' },
-            { label: 'Activity reservation', href: `/activity/${id}` }
+            { label: t('activity.activityreservation') || 'Activity reservation', href: '/activity' }
           ]}
           className="mb-8"
         />
 
         <div className="bg-white rounded-[2.5rem] shadow-sm p-6 sm:p-10">
           <h1 className="text-xl font-bold text-gray-900 mb-10">
-            Activity reservation
+            {t('activity.title') || 'Activity reservation'}
           </h1>
           
           {currentActivities.length > 0 ? (
@@ -42,8 +39,8 @@ const Activity: React.FC = () => {
             </div>
           ) : (
             <EmptyState
-              title="No activities found"
-              description="There are currently no activities available for this destination."
+              title={t('activity.noActivitiesTitle') || 'No activities found'}
+              description={t('activity.noActivitiesDesc') || 'There are currently no activities available for this destination.'}
             />
           )}
         </div>

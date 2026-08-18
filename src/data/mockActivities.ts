@@ -8,74 +8,32 @@ export const mockGalleryItems: GalleryItem[] = [
 ];
 
 export const mockActivities: Activity[] = [
-  // Activities for Gallery 1
   {
     id: '101',
-    galleryId: '1',
     title: 'Mauritius Watch Whale',
     rating: '5.00',
     reviews: 180,
     price: '800rmb',
-    unit: '/person',
-    isSpecial: true,
+    unit: 'person',
     image: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: '102',
-    galleryId: '1',
     title: 'Mauritius Watch Whale',
     rating: '5.00',
     reviews: 180,
     price: '4000rmb',
-    unit: '/boat(10p)',
+    unit: 'boat',
+    unitCount: 10,
     image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   },
   {
     id: '103',
-    galleryId: '1',
     title: 'Mauritius Whale Film',
     rating: '5.00',
     reviews: 180,
     price: '15500rmb',
-    unit: '/person',
-    details: 'see detailles',
+    unit: 'person',
     image: 'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  
-  // Activities for Gallery 2
-  {
-    id: '201',
-    galleryId: '2',
-    title: 'Snorkeling Adventure',
-    rating: '4.80',
-    reviews: 120,
-    price: '500rmb',
-    unit: '/person',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-
-  // Activities for Gallery 3
-  {
-    id: '301',
-    galleryId: '3',
-    title: 'Island Hopping',
-    rating: '4.90',
-    reviews: 200,
-    price: '1200rmb',
-    unit: '/person',
-    isSpecial: true,
-    image: 'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-
-  // Activities for Gallery 4
-  {
-    id: '401',
-    galleryId: '4',
-    title: 'Sunset Cruise',
-    rating: '4.95',
-    reviews: 150,
-    price: '2000rmb',
-    unit: '/boat(5p)',
-    image: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
   }
 ];

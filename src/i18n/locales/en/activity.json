@@ -1,0 +1,19 @@
+{
+  "activityreservation": "Activity reservation",
+  "title": "Activity reservation",
+  "noActivitiesTitle": "No activities found",
+  "noActivitiesDesc": "There are currently no activities available for this destination.",
+  "noImage": "No Image",
+  "reviews": "reviews",
+  "bookNow": "Book now",
+  "titles": {
+    "watchWhale1": "Mauritius Watch Whale",
+    "watchWhale2": "Mauritius Charter Boat Whale Watching",
+    "whaleFilm": "Mauritius Whale Photography"
+  },
+  "units": {
+    "person": "/ person",
+    "boat": "/ boat ({{count}} people)"
+  },
+  "details": "See details"
+}

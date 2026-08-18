@@ -1,0 +1,19 @@
+{
+  "activityreservation": "Réservation d'activité",
+  "title": "Réservation d'activité",
+  "noActivitiesTitle": "Aucune activité trouvée",
+  "noActivitiesDesc": "Il n'y a actuellement aucune activité disponible pour cette destination.",
+  "noImage": "Pas d'image",
+  "reviews": "avis",
+  "bookNow": "Réserver",
+  "titles": {
+    "watchWhale1": "Observation des baleines à Maurice",
+    "watchWhale2": "Bateau privé observation baleines Maurice",
+    "whaleFilm": "Photographie baleines Maurice"
+  },
+  "units": {
+    "person": "/ personne",
+    "boat": "/ bateau ({{count}} personnes)"
+  },
+  "details": "Voir les détails"
+}

@@ -72,7 +72,7 @@ function App() {
           <Route path="/payment/alipay" element={<PageErrorBoundary pageName="alipaypayment"><AlipayPayment /></PageErrorBoundary>} />
           <Route path="/payment/success" element={<PageErrorBoundary pageName="paymentsuccess"><PaymentSuccess /></PageErrorBoundary>} />
           <Route path="/payment/result" element={<PageErrorBoundary pageName="paymentresult"><PaymentResult /></PageErrorBoundary>} />
-          <Route path="/activity/:id" element={<PageErrorBoundary pageName="activity"><Activity /></PageErrorBoundary>} />
+          <Route path="/activity" element={<PageErrorBoundary pageName="activity"><Activity /></PageErrorBoundary>} />
           
           {/* Other Pages */}
           <Route path="/trips" element={<PageErrorBoundary pageName="trips"><Trips /></PageErrorBoundary>} />

@@ -15,6 +15,7 @@ import notifications from './notifications.json';
 import common from './common.json';
 import featureGate from './featureGate.json';
 import mybookings from './mybookings.json';
+import activity from './activity.json';
 
 const ar = {
   header,
@@ -34,6 +35,7 @@ const ar = {
   common,
   featureGate,
   mybookings,
+  activity,
 };
 
 export default ar;

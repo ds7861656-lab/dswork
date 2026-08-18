@@ -1,0 +1,19 @@
+{
+  "activityreservation": "活动预定",
+  "title": "活动预定",
+  "noActivitiesTitle": "暂无活动",
+  "noActivitiesDesc": "当前目的地暂无可预订的活动。",
+  "noImage": "无图片",
+  "reviews": "条评价",
+  "bookNow": "立即预订",
+  "titles": {
+    "watchWhale1": "毛里求斯观鲸",
+    "watchWhale2": "毛里求斯包船观鲸",
+    "whaleFilm": "毛里求斯观鲸摄影"
+  },
+  "units": {
+    "person": "/人",
+    "boat": "/船（{{count}}人）"
+  },
+  "details": "查看详情"
+}

@@ -16,6 +16,7 @@ import common from './common.json';
 import auth from './auth.json'; // Import the new file
 import featureGate from './featureGate.json';
 import mybookings from './mybookings.json';
+import activity from './activity.json';
 
 const zh = {
   header,
@@ -36,6 +37,7 @@ const zh = {
   auth, // Export it
   featureGate,
   mybookings,
+  activity,
 };
 
 export default zh;

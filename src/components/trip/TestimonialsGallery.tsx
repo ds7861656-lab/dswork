@@ -10,8 +10,8 @@ const TestimonialsGallery: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const handleImageClick = (id: string) => {
-    navigate(`/activity/${id}`);
+  const handleImageClick = () => {
+    navigate('/activity');
   };
 
   const mainItem = mockGalleryItems[0];
@@ -45,7 +45,7 @@ const TestimonialsGallery: React.FC = () => {
         {/* Main large image with overlay text */}
         {mainItem && (
           <div 
-            onClick={() => handleImageClick(mainItem.id)}
+            onClick={handleImageClick}
             className="relative rounded-2xl overflow-hidden h-32 group cursor-pointer"
           >
             <img src={mainItem.imageUrl} alt="Travel" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
@@ -65,7 +65,7 @@ const TestimonialsGallery: React.FC = () => {
             return (
               <div 
                 key={item.id}
-                onClick={() => handleImageClick(item.id)}
+                onClick={handleImageClick}
                 className={`${isWide ? 'col-span-2 ' : ''}rounded-xl overflow-hidden h-[60px] relative cursor-pointer group`}
               >
                 <img src={item.imageUrl} alt="Gallery" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />

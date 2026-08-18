@@ -1,0 +1,19 @@
+{
+  "activityreservation": "Reserva de actividad",
+  "title": "Reserva de actividad",
+  "noActivitiesTitle": "No se encontraron actividades",
+  "noActivitiesDesc": "Actualmente no hay actividades disponibles para este destino.",
+  "noImage": "Sin imagen",
+  "reviews": "reseñas",
+  "bookNow": "Reservar ahora",
+  "titles": {
+    "watchWhale1": "Avistamiento de ballenas en Mauricio",
+    "watchWhale2": "Alquiler de barco para ballenas en Mauricio",
+    "whaleFilm": "Fotografía de ballenas en Mauricio"
+  },
+  "units": {
+    "person": "/ persona",
+    "boat": "/ barco ({{count}} personas)"
+  },
+  "details": "Ver detalles"
+}
