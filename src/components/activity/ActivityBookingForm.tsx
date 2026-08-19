@@ -70,12 +70,6 @@ const ActivityBookingForm: React.FC<ActivityBookingFormProps> = ({ activity }) =
         />
       ) : (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-[12rem_1fr] gap-x-4 gap-y-0 items-center mb-6">
-            <label className="text-xl font-bold text-[#2d4b5a] shrink-0">
-              {t('activity.selectionDate')}
-            </label>
-            <div />
-          </div>
           <DateTimeRow
             label={t('activity.range.start')}
             state={startDate}
