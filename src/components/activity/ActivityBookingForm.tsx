@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { CalendarDaysIcon, ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import {
@@ -14,7 +15,11 @@ import {
   isSameDay,
   isToday
 } from 'date-fns';
-import { type Activity, type ActivityBookingType } from '../../types/activity';
+import {
+  type Activity,
+  type ActivityBookingType,
+  type ActivityBookingFormData
+} from '../../types/activity';
 
 interface ActivityBookingFormProps {
   activity: Activity;
@@ -38,6 +43,7 @@ function buildInitialDateObj(): Date {
 const ActivityBookingForm: React.FC<ActivityBookingFormProps> = ({ activity }) => {
   const { t, i18n } = useTranslation();
   void i18n;
+  const navigate = useNavigate();
 
   const [placeCount, setPlaceCount] = useState(1);
   const [goproCount, setGoproCount] = useState(0);
@@ -57,6 +63,38 @@ const ActivityBookingForm: React.FC<ActivityBookingFormProps> = ({ activity }) =
   const endCalendar = useCalendarInstance();
 
   const bookingType: ActivityBookingType = activity.bookingType || 'singleDate';
+
+  function buildBookingFormData(): ActivityBookingFormData {
+    const base: ActivityBookingFormData = {
+      bookingType,
+      placeCount,
+      goproCount: activity.hasGoPro ? goproCount : 0,
+      firstName,
+      lastName,
+      email,
+      countryCode,
+      phone
+    };
+    if (bookingType === 'singleDate') {
+      return {
+        ...base,
+        singleDateText: single.dateText,
+        singleDateObjISO: single.dateObj ? single.dateObj.toISOString() : undefined
+      };
+    }
+    return {
+      ...base,
+      startDateText: startDate.dateText,
+      startDateObjISO: startDate.dateObj ? startDate.dateObj.toISOString() : undefined,
+      endDateText: endDate.dateText,
+      endDateObjISO: endDate.dateObj ? endDate.dateObj.toISOString() : undefined
+    };
+  }
+
+  function handleBookNow() {
+    const formData = buildBookingFormData();
+    navigate(`/activity/${activity.id}/confirm`, { state: { formData } });
+  }
 
   return (
     <div className="bg-transparent p-0 flex flex-col">
@@ -184,7 +222,11 @@ const ActivityBookingForm: React.FC<ActivityBookingFormProps> = ({ activity }) =
 
       {/* Book now button */}
       <div className="flex justify-center">
-        <button className="bg-[#2d4b5a] text-white px-10 py-3 rounded-2xl text-lg font-bold hover:bg-[#1f3642] transition-colors shadow-sm">
+        <button
+          type="button"
+          onClick={handleBookNow}
+          className="bg-[#2d4b5a] text-white px-10 py-3 rounded-2xl text-lg font-bold hover:bg-[#1f3642] transition-colors shadow-sm"
+        >
           {t('activity.bookNow')}
         </button>
       </div>

@@ -39,6 +39,7 @@ import CarRentalDetails from './pages/CarRentalDetails';
 import PaymentResultTest from './pages/PaymentResultTest';
 import Activity from './pages/Activity';
 import ActivityDetail from './pages/ActivityDetail';
+import ActivityBookingConfirm from './pages/ActivityBookingConfirm';
 
 function App() {
   return (
@@ -75,6 +76,7 @@ function App() {
           <Route path="/payment/result" element={<PageErrorBoundary pageName="paymentresult"><PaymentResult /></PageErrorBoundary>} />
           <Route path="/activity" element={<PageErrorBoundary pageName="activity"><Activity /></PageErrorBoundary>} />
           <Route path="/activity/:id" element={<PageErrorBoundary pageName="activitydetail"><ActivityDetail /></PageErrorBoundary>} />
+          <Route path="/activity/:id/confirm" element={<PageErrorBoundary pageName="activitybookingconfirm"><ActivityBookingConfirm /></PageErrorBoundary>} />
           
           {/* Other Pages */}
           <Route path="/trips" element={<PageErrorBoundary pageName="trips"><Trips /></PageErrorBoundary>} />

@@ -77,5 +77,20 @@
       "video": "1 clip de video con corrección de color",
       "singleSupplement": "Se requiere un suplemento individual de 200 USD para 1 persona en 1 habitación durante 6 noches"
     }
+  },
+
+  "booking": {
+    "confirmed": "RESERVA CONFIRMADA",
+    "confirm": "Confirmación del pedido",
+    "date": "Fecha",
+    "place": "Lugar",
+    "totalPrice": "Precio total",
+    "liveGuide": "Guía en vivo",
+    "refund": "Reembolso posible 3 días antes de la salida.",
+    "backHome": "Volver al inicio",
+    "pay": "Pagar",
+    "notFound": "Información de reserva no encontrada",
+    "notFoundDesc": "Vuelva a la página de la actividad y vuelva a enviar el formulario de reserva.",
+    "backToActivity": "Volver a la actividad"
   }
 }

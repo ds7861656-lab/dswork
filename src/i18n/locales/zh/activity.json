@@ -58,10 +58,10 @@
   },
   "placeReservation": "预订人数",
   "enterContact": "填写联系信息",
-  "firstName": "名（First Name）",
-  "lastName": "姓（Last Name）",
-  "email": "邮箱（Email）",
-  "mobilePhone": "手机号（Mobile Phone）",
+  "firstName": "名",
+  "lastName": "姓",
+  "email": "邮箱",
+  "mobilePhone": "手机号",
 
   "package": {
     "subtitle": "全包个人旅行保险",
@@ -77,5 +77,20 @@
       "video": "1 条调色视频短片",
       "singleSupplement": "单人入住 6 晚需补单房差 200 美元"
     }
+  },
+
+  "booking": {
+    "confirmed": "预订已确认",
+    "confirm": "订单确认",
+    "date": "日期",
+    "place": "预订人数",
+    "totalPrice": "总金额",
+    "liveGuide": "现场导览语言",
+    "refund": "出发前 3 天可退款",
+    "backHome": "返回首页",
+    "pay": "支付",
+    "notFound": "未找到预订信息",
+    "notFoundDesc": "请回到活动页面重新提交预订表单。",
+    "backToActivity": "返回活动详情"
   }
 }

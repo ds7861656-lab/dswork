@@ -77,5 +77,20 @@
       "video": "1 video clip with color grading",
       "singleSupplement": "A single supplement of 200 USD is required for 1 person in 1 room for 6 nights"
     }
+  },
+
+  "booking": {
+    "confirmed": "BOOKING CONFIRMED",
+    "confirm": "Order Confirmation",
+    "date": "Date",
+    "place": "Place",
+    "totalPrice": "Total Price",
+    "liveGuide": "Live guide",
+    "refund": "Refund possible 3 days before departure.",
+    "backHome": "Back Home",
+    "pay": "Pay",
+    "notFound": "Booking information not found",
+    "notFoundDesc": "Please return to the activity page and resubmit the booking form.",
+    "backToActivity": "Back to Activity"
   }
 }

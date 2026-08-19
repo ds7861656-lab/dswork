@@ -77,5 +77,20 @@
       "video": "1 extrait vidéo avec étalonnage",
       "singleSupplement": "Un supplément individuel de 200 USD est requis pour 1 personne dans 1 chambre pendant 6 nuits"
     }
+  },
+
+  "booking": {
+    "confirmed": "RÉSERVATION CONFIRMÉE",
+    "confirm": "Confirmation de la commande",
+    "date": "Date",
+    "place": "Place",
+    "totalPrice": "Prix total",
+    "liveGuide": "Guide en direct",
+    "refund": "Remboursement possible 3 jours avant le départ.",
+    "backHome": "Retour à l'accueil",
+    "pay": "Payer",
+    "notFound": "Informations de réservation introuvables",
+    "notFoundDesc": "Veuillez revenir à la page de l'activité et renvoyer le formulaire de réservation.",
+    "backToActivity": "Retour à l'activité"
   }
 }
