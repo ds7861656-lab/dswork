@@ -6,13 +6,21 @@ import { QRCodeCanvas } from 'qrcode.react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/outline';
-import { createAlipayOrder, checkOrderStatus, getPlanDetails } from '../services/paymentApi';
+import { createAlipayOrder, createActivityOrder, checkOrderStatus, getPlanDetails } from '../services/paymentApi';
+import type { ActivityBookingFormData } from '../types/activity';
 
 interface LocationState {
-  planId: string;
+  planId?: string;
   planName?: string;
   planPrice?: number;
   paymentMethod: string;
+  orderType?: 'subscription' | 'activity';
+  activityId?: string;
+  activityTitle?: string;
+  amount?: number;
+  formData?: ActivityBookingFormData;
+  currency?: string;
+  currencySymbol?: string;
 }
 
 type PaymentStatus = 'loading' | 'ready' | 'polling' | 'success' | 'error';
@@ -27,6 +35,8 @@ const AlipayPayment: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const state = location.state as LocationState;
+
+  const isActivity = state?.orderType === 'activity' || Boolean(state?.activityId);
 
   const [status, setStatus] = useState<PaymentStatus>('loading');
   const [payQrCode, setPayQrCode] = useState<string>('');
@@ -48,7 +58,7 @@ const AlipayPayment: React.FC = () => {
   const payWindowRef = useRef<Window | null>(null);
 
   useEffect(() => { statusRef.current = status; }, [status]);
-  useEffect(() => { if (!state?.planId) navigate('/pricing'); }, [state, navigate]);
+  useEffect(() => { if (!state?.planId && !state?.activityId) navigate('/pricing'); }, [state, navigate]);
 
   // ============================================================================
   // NAVIGATE TO RESULT
@@ -57,23 +67,34 @@ const AlipayPayment: React.FC = () => {
     if (pollingRef.current) { clearTimeout(pollingRef.current); pollingRef.current = null; }
     setStatus('success');
     setTimeout(() => {
-      navigate('/payment/result', {
-        state: {
-          planId: state?.planId,
-          planName: getPlanDetails(state?.planId || 'month').name,
-          planPrice: order?.amount,
-          currency: 'CNY',
-          currencySymbol: '¥',
-          paymentMethod: t('trips.alipay', 'Alipay'),
-          orderNumber: orderNo,
-          orderData: order,
-          vipTypeId: order?.vipTypeId || order?.levelId,
-          startTime: order?.startTime,
-          endTime: order?.endTime,
-        },
-      });
+      const resultState = isActivity
+        ? {
+            orderType: 'activity',
+            activityId: state?.activityId,
+            activityTitle: state?.activityTitle,
+            amount: order?.amount ?? state?.amount,
+            currency: 'CNY',
+            currencySymbol: '¥',
+            paymentMethod: t('trips.alipay', 'Alipay'),
+            orderNumber: orderNo,
+            orderData: order,
+          }
+        : {
+            planId: state?.planId,
+            planName: getPlanDetails(state?.planId || 'month').name,
+            planPrice: order?.amount,
+            currency: 'CNY',
+            currencySymbol: '¥',
+            paymentMethod: t('trips.alipay', 'Alipay'),
+            orderNumber: orderNo,
+            orderData: order,
+            vipTypeId: order?.vipTypeId || order?.levelId,
+            startTime: order?.startTime,
+            endTime: order?.endTime,
+          };
+      navigate('/payment/result', { state: resultState });
     }, 1500);
-  }, [navigate, state, t]);
+  }, [navigate, state, t, isActivity]);
 
   // ============================================================================
   // OPEN HTML FORM IN NEW TAB (fallback for old backend format)
@@ -205,11 +226,13 @@ const AlipayPayment: React.FC = () => {
   // ============================================================================
   useEffect(() => {
     const init = async () => {
-      if (!state?.planId || initRef.current) return;
+      if ((!state?.planId && !state?.activityId) || initRef.current) return;
       initRef.current = true;
       try {
         setStatus('loading');
-        const order = await createAlipayOrder(state.planId);
+        const order = isActivity
+          ? await createActivityOrder(state.activityId!, state.formData!, state.amount ?? 0)
+          : await createAlipayOrder(state.planId!);
         console.log('✅ Order:', order.orderNo, '| payQrCode type:', isQrUrl(order.payQrCode) ? 'URL' : 'HTML form');
 
         orderNoRef.current = order.orderNo;
@@ -234,7 +257,7 @@ const AlipayPayment: React.FC = () => {
     };
     init();
     return () => { if (pollingRef.current) clearTimeout(pollingRef.current); };
-  }, [state?.planId]);
+  }, [state?.planId, state?.activityId, isActivity]);
 
   // ============================================================================
   // HANDLERS
@@ -409,13 +432,13 @@ const AlipayPayment: React.FC = () => {
                 {/* Order Info — Alipay always uses ¥ (CNY) */}
                 <div className="bg-slate-50 rounded-xl p-6 mb-6">
                   <div className="flex justify-between items-center mb-3">
-                    <span className="text-slate-600">{t('trips.subscriptionPlan', 'Subscription Plan')}:</span>
-                    <span className="font-semibold text-slate-900">{planDetails.name}</span>
+                    <span className="text-slate-600">{isActivity ? t('activity.title', 'Activity reservation') : t('trips.subscriptionPlan', 'Subscription Plan')}:</span>
+                    <span className="font-semibold text-slate-900">{isActivity ? state?.activityTitle : planDetails.name}</span>
                   </div>
                   <div className="flex justify-between items-center pt-3 border-t border-slate-200">
                     <span className="text-slate-600">{t('trips.totalAmount', 'Total Amount')}:</span>
                     <span className="text-2xl font-bold" style={{ color: '#1677FF' }}>
-                      ¥{orderData?.amount || planDetails.price}
+                      ¥{isActivity ? (orderData?.amount ?? state?.amount) : (orderData?.amount || planDetails.price)}
                     </span>
                   </div>
                 </div>

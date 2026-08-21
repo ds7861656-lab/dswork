@@ -4,14 +4,20 @@ import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CreditCardIcon, DevicePhoneMobileIcon } from '@heroicons/react/24/outline';
+import type { ActivityBookingFormData } from '../types/activity';
 
 interface LocationState {
-  planId: string;
+  planId?: string;
   planName?: string;
   planPrice?: number;
   currency?: string;
   currencySymbol?: string;
   vipTypeId?: number;
+  orderType?: 'subscription' | 'activity';
+  activityId?: string;
+  activityTitle?: string;
+  amount?: number;
+  formData?: ActivityBookingFormData;
 }
 
 const PaymentMethod: React.FC = () => {
@@ -22,9 +28,11 @@ const PaymentMethod: React.FC = () => {
   
   const [selectedMethod, setSelectedMethod] = useState<'visa' | 'alipay' | null>(null);
 
-  // If no plan selected, redirect back to pricing
+  const isActivity = state?.orderType === 'activity';
+
+  // If no plan or activity selected, redirect back to pricing
   React.useEffect(() => {
-    if (!state?.planId) {
+    if (!state?.planId && !state?.activityId) {
       navigate('/pricing');
     }
   }, [state, navigate]);
@@ -155,10 +163,10 @@ const PaymentMethod: React.FC = () => {
 
           {/* Back Link */}
           <button
-            onClick={() => navigate('/pricing')}
+            onClick={() => navigate(isActivity && state?.activityId ? `/activity/${state.activityId}` : '/pricing')}
             className="w-full mt-4 py-3 text-slate-600 hover:text-slate-900 transition-colors"
           >
-            ← {t('trips.backToPricing', 'Back to pricing')}
+            ← {isActivity ? t('activity.booking.backToActivity', 'Back to Activity') : t('trips.backToPricing', 'Back to pricing')}
           </button>
         </div>
       </div>

@@ -10,13 +10,17 @@ import { CheckCircleIcon } from '@heroicons/react/24/solid';
 import { ClockIcon, CreditCardIcon, DocumentTextIcon, CalendarIcon } from '@heroicons/react/24/outline';
 
 interface LocationState {
-  planId: string;
+  planId?: string;
   planName?: string;
   planPrice?: number;
   currency?: string;
   currencySymbol?: string;
   paymentMethod: string;
   orderNumber: string;
+  orderType?: 'subscription' | 'activity';
+  activityId?: string;
+  activityTitle?: string;
+  amount?: number;
   orderData?: {
     id: number;
     userId: number;
@@ -44,6 +48,8 @@ const PaymentResult: React.FC = () => {
   const { updatePayType } = useAuth();
   const { symbol, getPrice } = useCurrency();
 
+  const isActivity = state?.orderType === 'activity';
+
   // Map planId to payType
   const getPlanPayType = (planId: string): number => {
     const mapping: Record<string, number> = {
@@ -58,20 +64,20 @@ const PaymentResult: React.FC = () => {
 
   // ✅ Update payType automatically when this page loads (payment succeeded)
   useEffect(() => {
-    if (state?.planId) {
+    if (!isActivity && state?.planId) {
       const newPayType = getPlanPayType(state.planId);
       console.log('💳 Payment successful! Updating subscription...');
       updateUserPayType(newPayType);
       updatePayType(newPayType);
     }
-  }, [state?.planId, updatePayType]);
+  }, [state?.planId, isActivity, updatePayType]);
 
   // Redirect if accessed directly without payment data
   useEffect(() => {
     if (!state?.orderNumber) {
-      navigate('/pricing');
+      navigate(isActivity ? '/activity' : '/pricing');
     }
-  }, [state, navigate]);
+  }, [state, navigate, isActivity]);
 
   // Use real backend data when available
   const orderData = state?.orderData;
@@ -82,7 +88,7 @@ const PaymentResult: React.FC = () => {
 
   // ✅ Use useCurrency hook — currency symbol adapts to language
   const displaySymbol = state?.currencySymbol || symbol;
-  const amount = orderData?.amount || state?.planPrice || (state?.planId ? getPrice(state.planId) : 0);
+  const amount = orderData?.amount || state?.amount || state?.planPrice || (state?.planId ? getPrice(state.planId) : 0);
 
   const formatDate = (dateString: string | undefined) => {
     if (!dateString) return '—';
@@ -128,15 +134,25 @@ const PaymentResult: React.FC = () => {
               {t('trips.paymentSuccessTitle', 'Payment Successful!')}
             </h1>
             <p className="text-lg text-slate-600">
-              {t('trips.paymentSuccessSubtitle', 'Thank you for your purchase! Your subscription is now active.')}
+              {isActivity
+                ? t('activity.booking.confirmed', 'Booking confirmed')
+                : t('trips.paymentSuccessSubtitle', 'Thank you for your purchase! Your subscription is now active.')}
             </p>
 
             {/* Purchased plan badge */}
-            {vipTypeId && (
-              <div className="mt-4 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-full shadow-lg">
-                <span className="text-2xl">⭐</span>
-                <span className="font-bold text-lg">VIP {getPlanName(vipTypeId)}</span>
-              </div>
+            {isActivity ? (
+              state?.activityTitle && (
+                <div className="mt-4 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-full shadow-lg">
+                  <span className="font-bold text-lg">{state.activityTitle}</span>
+                </div>
+              )
+            ) : (
+              vipTypeId && (
+                <div className="mt-4 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-full shadow-lg">
+                  <span className="text-2xl">⭐</span>
+                  <span className="font-bold text-lg">VIP {getPlanName(vipTypeId)}</span>
+                </div>
+              )
             )}
           </div>
 
@@ -163,11 +179,11 @@ const PaymentResult: React.FC = () => {
                 <CreditCardIcon className="w-6 h-6 text-teal-600 flex-shrink-0" />
                 <div className="flex-1">
                   <p className="text-sm text-slate-500 mb-1">
-                    {t('trips.subscriptionPlan', 'Subscription Plan')}
+                    {isActivity ? t('activity.title', 'Activity reservation') : t('trips.subscriptionPlan', 'Subscription Plan')}
                   </p>
                   <p className="font-semibold text-slate-900">
-                    {getPlanName(vipTypeId)}
-                    {vipTypeId && (
+                    {isActivity ? state?.activityTitle : getPlanName(vipTypeId)}
+                    {!isActivity && vipTypeId && (
                       <span className="ml-2 text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded">
                         VIP Type {vipTypeId}
                       </span>
@@ -228,6 +244,7 @@ const PaymentResult: React.FC = () => {
           </div>
 
           {/* What's Next */}
+          {!isActivity && (
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
             <h3 className="font-semibold text-blue-900 mb-3">
               {t('trips.whatsNext', "What's Next?")}
@@ -247,14 +264,15 @@ const PaymentResult: React.FC = () => {
               ))}
             </ul>
           </div>
+          )}
 
           {/* Action Buttons — primary CTA links to /subscription */}
           <div className="space-y-4">
             <button
-              onClick={() => navigate('/subscription')}
+              onClick={() => navigate(isActivity ? '/activity' : '/subscription')}
               className="w-full py-4 bg-teal-600 text-white rounded-xl font-semibold hover:bg-teal-700 transition-all shadow-lg"
             >
-              {t('trips.viewSubscription', 'View My Subscription')}
+              {isActivity ? t('activity.booking.backToActivity', 'Back to Activity') : t('trips.viewSubscription', 'View My Subscription')}
             </button>
             <button
               onClick={() => navigate('/trips')}

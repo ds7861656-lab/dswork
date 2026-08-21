@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { format } from 'date-fns';
@@ -7,13 +7,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Breadcrumb from '../components/Breadcrumb';
 import EmptyState from '../components/ui/EmptyState';
-import { mockActivities } from '../data/mockActivities';
 import { activityService } from '../services/api/activityService';
-import { useSnackbar } from '../contexts/SnackbarContext';
 import {
+  type Activity,
   type ActivityBookingFormData,
-  calculateActivityTotal,
-  parsePriceToNumber
+  calculateActivityTotal
 } from '../types/activity';
 
 interface ActivityBookingConfirmLocationState {
@@ -40,20 +38,46 @@ const ActivityBookingConfirm: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t } = useTranslation();
-  const { showSuccess } = useSnackbar();
 
-  const [submitting, setSubmitting] = useState(false);
+  const [activity, setActivity] = useState<Activity | null>(null);
+  const [loading, setLoading] = useState(true);
 
   const state = location.state as ActivityBookingConfirmLocationState | null;
   const formData = state?.formData;
 
-  const activity = id ? mockActivities.find((a) => a.id === id) : undefined;
+  useEffect(() => {
+    if (!id) {
+      setLoading(false);
+      return;
+    }
+    activityService
+      .getActivityById(id)
+      .then(setActivity)
+      .catch((err) => {
+        console.error('获取活动详情失败', err);
+        setActivity(null);
+      })
+      .finally(() => setLoading(false));
+  }, [id]);
 
   const breadcrumbItems = [
     { label: t('activity.title') || 'Activity reservation', href: '/activity' },
     { label: t('activity.bookingDetail') || 'Booking details', href: id ? `/activity/${id}` : '/activity' },
     { label: t('activity.booking.confirm') || 'Order Confirmation' }
   ];
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50/50 flex flex-col">
+        <Header />
+        <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <Breadcrumb items={breadcrumbItems} className="mb-8" />
+          <p className="text-center text-gray-500 py-20">Loading...</p>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!activity || !formData) {
     return (
@@ -89,8 +113,6 @@ const ActivityBookingConfirm: React.FC = () => {
     formData.goproCount
   );
 
-  void parsePriceToNumber;
-
   const dateLabel =
     formData.bookingType === 'dateRange'
       ? `${formatISODate(formData.startDateObjISO)} ~ ${formatISODate(formData.endDateObjISO)}`
@@ -109,17 +131,19 @@ const ActivityBookingConfirm: React.FC = () => {
   const emailText = formData.email || '-';
   const phoneText = formData.phone ? `${formData.countryCode || ''} ${formData.phone}` : '-';
 
-  const handlePay = async () => {
-    if (!activity || !formData || submitting) return;
-    setSubmitting(true);
-    try {
-      await activityService.submitBooking(activity.id, formData);
-      showSuccess(t('activity.booking.submitSuccess') || '提交成功');
-    } catch (err) {
-      console.error('提交订单失败', err);
-    } finally {
-      setSubmitting(false);
-    }
+  const handlePay = () => {
+    if (!activity || !formData) return;
+    navigate('/payment/method', {
+      state: {
+        orderType: 'activity',
+        activityId: activity.id,
+        activityTitle: activity.title,
+        amount: totals.totalAmount,
+        formData,
+        currency: 'CNY',
+        currencySymbol: '¥'
+      }
+    });
   };
 
   return (
@@ -200,10 +224,9 @@ const ActivityBookingConfirm: React.FC = () => {
               <button
                 type="button"
                 onClick={handlePay}
-                disabled={submitting}
-                className="px-8 py-3 bg-[#2d4b5a] text-white rounded-2xl font-bold text-lg hover:bg-[#1f3642] transition-colors shadow-sm disabled:opacity-60 disabled:cursor-not-allowed"
+                className="px-8 py-3 bg-[#2d4b5a] text-white rounded-2xl font-bold text-lg hover:bg-[#1f3642] transition-colors shadow-sm"
               >
-                {submitting ? t('activity.booking.submitting') : t('activity.booking.pay')}
+                {t('activity.booking.pay')}
               </button>
             </div>
           </div>

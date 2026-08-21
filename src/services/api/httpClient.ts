@@ -18,6 +18,7 @@ import {
 export interface RequestConfig extends RequestInit {
   requiresAuth?: boolean;
   timeout?: number;
+  skipLang?: boolean;
 }
 
 /**
@@ -71,12 +72,13 @@ export class HttpClient {
       requiresAuth = true,
       timeout = 30000,
       headers = {},
+      skipLang = false,
       ...restConfig
     } = config;
 
-    // Add language parameter to URL if not already present
+    // Add language parameter to URL if not already present（skipLang 用于本地 json-server 等无需 lang 的场景）
     const url = new URL(endpoint, this.baseUrl);
-    if (!url.searchParams.has('lang')) {
+    if (!skipLang && !url.searchParams.has('lang')) {
       url.searchParams.set('lang', i18n.language || 'en');
     }
     const fullEndpoint = `${url.pathname}${url.search}`;

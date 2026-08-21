@@ -1,6 +1,8 @@
 // src/services/paymentApi.ts
 // Payment API Service - Fixed for actual backend response structure
 
+import type { ActivityBookingFormData } from '../types/activity';
+
 const API_BASE_URL = 'https://afreshtrip.cn/web';
 
 const VIP_TYPE_CODE_MAPPING: Record<string, string> = {
@@ -177,6 +179,90 @@ export const createAlipayOrder = async (planId: string): Promise<OrderData> => {
       throw new Error('网络错误，请检查网络连接 / Network error. Please check your connection.');
     }
     
+    if (error.message.includes('401') || error.message.includes('403')) {
+      throw new Error('认证失败，请重新登录 / Authentication failed. Please login again.');
+    }
+
+    throw error;
+  }
+};
+
+// ============================================================================
+// CREATE ACTIVITY ORDER (活动预订 → 支付宝下单)
+// ============================================================================
+
+export interface ActivityOrderData {
+  orderNo: string;
+  amount: number;
+  payQrCode: string;
+  status?: number;
+  payType?: number;
+  [key: string]: unknown;
+}
+
+export const createActivityOrder = async (
+  activityId: string,
+  formData: ActivityBookingFormData,
+  amount: number
+): Promise<ActivityOrderData> => {
+  let token: string;
+  try {
+    token = getAuthToken();
+  } catch (error: any) {
+    throw new Error(error.message || 'Authentication failed. Please login.');
+  }
+
+  console.log('🛒 Creating activity Alipay order...');
+  console.log('Activity ID:', activityId);
+  console.log('API URL:', `${API_BASE_URL}/activity/booking`);
+
+  try {
+    const response = await fetch(`${API_BASE_URL}/activity/booking`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        activityId,
+        ...formData,
+        amount,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Error response:', errorText);
+
+      let errorData;
+      try {
+        errorData = JSON.parse(errorText);
+      } catch {
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
+      }
+
+      throw new Error(errorData.msg || `Failed to create activity order (${response.status})`);
+    }
+
+    const result: { msg: string; code: number; data: ActivityOrderData } = await response.json();
+    console.log('Backend response:', result);
+
+    if (result.code !== 200) {
+      throw new Error(result.msg || 'Activity order creation failed');
+    }
+
+    console.log('✅ Activity order created successfully!');
+    console.log('Order Number:', result.data.orderNo);
+    console.log('QR Code URL:', result.data.payQrCode);
+
+    return result.data;
+  } catch (error: any) {
+    console.error('❌ Error creating activity order:', error);
+
+    if (error.message.includes('fetch') || error.message.includes('Failed to fetch')) {
+      throw new Error('网络错误，请检查网络连接 / Network error. Please check your connection.');
+    }
+
     if (error.message.includes('401') || error.message.includes('403')) {
       throw new Error('认证失败，请重新登录 / Authentication failed. Please login again.');
     }

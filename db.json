@@ -1,0 +1,115 @@
+{
+  "activities": [
+    {
+      "id": "101",
+      "title": "Mauritius Watch Whale",
+      "rating": "5.00",
+      "reviews": 180,
+      "price": "800rmb",
+      "unit": "person",
+      "image": "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "detailMode": "standard",
+      "bookingType": "singleDate",
+      "duration": "4h",
+      "ageRange": "10-70",
+      "guideLanguages": [
+        "English",
+        "French",
+        "Chinese"
+      ],
+      "capacityNote": "capacity.onePlaceBoat",
+      "highlights": [
+        "highlights.snorkeling",
+        "highlights.equipment",
+        "highlights.finRentalDomestic",
+        "highlights.finRentalBranded"
+      ],
+      "equipmentNotes": [
+        "equipment.masks",
+        "equipment.lifeJackets"
+      ],
+      "hasGoPro": true,
+      "goproPrice": "200rmb",
+      "goproUnit": "person",
+      "goproLabelKey": "goproFilm.service"
+    },
+    {
+      "id": "102",
+      "title": "Mauritius Watch Whale",
+      "rating": "5.00",
+      "reviews": 180,
+      "price": "4000rmb",
+      "unit": "boat",
+      "unitCount": 10,
+      "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "detailMode": "standard",
+      "bookingType": "singleDate",
+      "duration": "4h",
+      "ageRange": "10-70",
+      "guideLanguages": [
+        "English",
+        "French",
+        "Chinese"
+      ],
+      "capacityNote": "capacity.privateBoat10",
+      "highlights": [
+        "highlights.snorkeling",
+        "highlights.equipment",
+        "highlights.finRentalDomestic",
+        "highlights.finRentalBranded"
+      ],
+      "equipmentNotes": [
+        "equipment.masks",
+        "equipment.lifeJackets"
+      ],
+      "hasGoPro": true,
+      "goproPrice": "200rmb",
+      "goproUnit": "person",
+      "goproLabelKey": "goproFilm.service"
+    },
+    {
+      "id": "103",
+      "title": "Mauritius Whale Film",
+      "rating": "5.00",
+      "reviews": 180,
+      "price": "15500rmb",
+      "unit": "person",
+      "image": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "detailMode": "package",
+      "bookingType": "dateRange",
+      "packageSubtitle": "package.subtitle",
+      "packageItems": [
+        "package.items.day4Sea",
+        "package.items.landSession",
+        "package.items.accommodation",
+        "package.items.airportTransfer",
+        "package.items.freeDay",
+        "package.items.underwater9",
+        "package.items.land3",
+        "package.items.totalPhotos",
+        "package.items.video",
+        "package.items.singleSupplement"
+      ],
+      "hasGoPro": false
+    }
+  ],
+  "bookings": [
+    {
+      "activityId": "103",
+      "bookingType": "dateRange",
+      "placeCount": 121,
+      "goproCount": 0,
+      "firstName": "11",
+      "lastName": "444",
+      "email": "333",
+      "countryCode": "+1",
+      "phone": "222",
+      "startDateText": "Wed, 12 April",
+      "startDateObjISO": "2026-08-12T03:31:20.713Z",
+      "endDateText": "Wed, 12 April",
+      "endDateObjISO": "2026-08-12T03:31:20.714Z",
+      "id": "eBEQo9N7Woc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
