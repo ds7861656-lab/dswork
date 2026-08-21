@@ -89,6 +89,8 @@
     "refund": "出发前 3 天可退款",
     "backHome": "返回首页",
     "pay": "支付",
+    "submitting": "提交中...",
+    "submitSuccess": "提交成功",
     "notFound": "未找到预订信息",
     "notFoundDesc": "请回到活动页面重新提交预订表单。",
     "backToActivity": "返回活动详情"

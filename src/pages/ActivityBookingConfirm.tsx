@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { format } from 'date-fns';
@@ -8,6 +8,8 @@ import Footer from '../components/Footer';
 import Breadcrumb from '../components/Breadcrumb';
 import EmptyState from '../components/ui/EmptyState';
 import { mockActivities } from '../data/mockActivities';
+import { activityService } from '../services/api/activityService';
+import { useSnackbar } from '../contexts/SnackbarContext';
 import {
   type ActivityBookingFormData,
   calculateActivityTotal,
@@ -38,6 +40,9 @@ const ActivityBookingConfirm: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t } = useTranslation();
+  const { showSuccess } = useSnackbar();
+
+  const [submitting, setSubmitting] = useState(false);
 
   const state = location.state as ActivityBookingConfirmLocationState | null;
   const formData = state?.formData;
@@ -103,6 +108,19 @@ const ActivityBookingConfirm: React.FC = () => {
   const fullName = [formData.firstName, formData.lastName].filter(Boolean).join(' ') || '-';
   const emailText = formData.email || '-';
   const phoneText = formData.phone ? `${formData.countryCode || ''} ${formData.phone}` : '-';
+
+  const handlePay = async () => {
+    if (!activity || !formData || submitting) return;
+    setSubmitting(true);
+    try {
+      await activityService.submitBooking(activity.id, formData);
+      showSuccess(t('activity.booking.submitSuccess') || '提交成功');
+    } catch (err) {
+      console.error('提交订单失败', err);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50/50 flex flex-col">
@@ -181,10 +199,11 @@ const ActivityBookingConfirm: React.FC = () => {
             <div className="flex justify-center">
               <button
                 type="button"
-                onClick={() => {}}
-                className="px-8 py-3 bg-[#2d4b5a] text-white rounded-2xl font-bold text-lg hover:bg-[#1f3642] transition-colors shadow-sm"
+                onClick={handlePay}
+                disabled={submitting}
+                className="px-8 py-3 bg-[#2d4b5a] text-white rounded-2xl font-bold text-lg hover:bg-[#1f3642] transition-colors shadow-sm disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {t('activity.booking.pay')}
+                {submitting ? t('activity.booking.submitting') : t('activity.booking.pay')}
               </button>
             </div>
           </div>

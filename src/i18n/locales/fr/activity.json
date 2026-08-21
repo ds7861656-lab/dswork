@@ -89,6 +89,8 @@
     "refund": "Remboursement possible 3 jours avant le départ.",
     "backHome": "Retour à l'accueil",
     "pay": "Payer",
+    "submitting": "Envoi en cours...",
+    "submitSuccess": "Soumis avec succès",
     "notFound": "Informations de réservation introuvables",
     "notFoundDesc": "Veuillez revenir à la page de l'activité et renvoyer le formulaire de réservation.",
     "backToActivity": "Retour à l'activité"

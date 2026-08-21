@@ -89,6 +89,8 @@
     "refund": "Reembolso posible 3 días antes de la salida.",
     "backHome": "Volver al inicio",
     "pay": "Pagar",
+    "submitting": "Enviando...",
+    "submitSuccess": "Enviado con éxito",
     "notFound": "Información de reserva no encontrada",
     "notFoundDesc": "Vuelva a la página de la actividad y vuelva a enviar el formulario de reserva.",
     "backToActivity": "Volver a la actividad"

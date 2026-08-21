@@ -89,6 +89,8 @@
     "refund": "Refund possible 3 days before departure.",
     "backHome": "Back Home",
     "pay": "Pay",
+    "submitting": "Submitting...",
+    "submitSuccess": "Submitted successfully",
     "notFound": "Booking information not found",
     "notFoundDesc": "Please return to the activity page and resubmit the booking form.",
     "backToActivity": "Back to Activity"
